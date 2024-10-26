@@ -29,7 +29,7 @@ export interface CreateResult<Screens extends ScreensConfig> {
     breakpointName: Screens extends readonly string[]
       ? Screens[number]
       : Extract<keyof Screens, string>,
-    options?: UseScreenOptions
+    options?: UseScreenOptions,
   ) => boolean;
 
   /**
@@ -40,7 +40,7 @@ export interface CreateResult<Screens extends ScreensConfig> {
   useScreenReverse: (
     breakpointName: Screens extends readonly string[]
       ? Screens[number]
-      : Extract<keyof Screens, string>
+      : Extract<keyof Screens, string>,
   ) => boolean;
 
   /**
@@ -54,7 +54,7 @@ export interface CreateResult<Screens extends ScreensConfig> {
       ? Screens[number]
       : Extract<keyof Screens, string>,
     effect: (match: boolean) => void,
-    deps?: DependencyList
+    deps?: DependencyList,
   ) => void;
 
   /**
@@ -69,7 +69,7 @@ export interface CreateResult<Screens extends ScreensConfig> {
       ? Screens[number]
       : Extract<keyof Screens, string>,
     valid: T,
-    invalid: U
+    invalid: U,
   ) => T | U;
 
   /**
@@ -88,7 +88,6 @@ export interface CreateResult<Screens extends ScreensConfig> {
  * @returns A collection of hooks for using, observing, and managing screen breakpoints.
  */
 
- 
 export function create<Screens extends ScreensConfig = typeof defaultScreens>(
   // eslint-disable-next-line
   screens: Screens = defaultScreens as any
@@ -107,10 +106,10 @@ export function create<Screens extends ScreensConfig = typeof defaultScreens>(
    */
   const useScreen = (
     breakpointName: BreakpointName,
-    options?: UseScreenOptions
+    options?: UseScreenOptions,
   ): boolean => {
     const [isMatch, setIsMatch] = useState<boolean>(() =>
-      manager.getBreakpointState(breakpointName)
+      manager.getBreakpointState(breakpointName),
     );
 
     useIsomorphicEffect(() => {
@@ -139,7 +138,7 @@ export function create<Screens extends ScreensConfig = typeof defaultScreens>(
   const useScreenEffect = (
     breakpointName: BreakpointName,
     effect: (match: boolean) => void,
-    deps: DependencyList = []
+    deps: DependencyList = [],
   ) => {
     const match = useScreen(breakpointName);
     useIsomorphicEffect(() => effect(match), [match, effect, ...deps]);
@@ -155,7 +154,7 @@ export function create<Screens extends ScreensConfig = typeof defaultScreens>(
   const useScreenValue = <T, U>(
     breakpointName: BreakpointName,
     valid: T,
-    invalid: U
+    invalid: U,
   ): T | U => {
     const match = useScreen(breakpointName);
     return useMemo(() => (match ? valid : invalid), [match, valid, invalid]);

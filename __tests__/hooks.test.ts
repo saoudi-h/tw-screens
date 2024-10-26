@@ -30,7 +30,7 @@ describe("useBreakpoint", () => {
     setScreenWidth(1200);
 
     const { result } = renderHook(() =>
-      useBreakpoint("1024px", { reverse: true })
+      useBreakpoint("1024px", { reverse: true }),
     );
     expect(result.current).toBe(false);
   });
@@ -39,7 +39,7 @@ describe("useBreakpoint", () => {
     setScreenWidth(800);
 
     const { result } = renderHook(() =>
-      useBreakpoint("1024px", { reverse: true })
+      useBreakpoint("1024px", { reverse: true }),
     );
     expect(result.current).toBe(true);
   });
@@ -48,7 +48,7 @@ describe("useBreakpoint", () => {
     setScreenWidth(900);
 
     const { result } = renderHook(() =>
-      useBreakpoint({ min: "768px", max: "1024px" })
+      useBreakpoint({ min: "768px", max: "1024px" }),
     );
     expect(result.current).toBe(true);
   });
@@ -57,7 +57,7 @@ describe("useBreakpoint", () => {
     setScreenWidth(1100);
 
     const { result } = renderHook(() =>
-      useBreakpoint({ min: "768px", max: "1024px" })
+      useBreakpoint({ min: "768px", max: "1024px" }),
     );
     expect(result.current).toBe(false);
   });
@@ -66,7 +66,7 @@ describe("useBreakpoint", () => {
     setScreenWidth(768);
 
     const { result } = renderHook(() =>
-      useBreakpoint({ raw: "(min-width: 768px)" })
+      useBreakpoint({ raw: "(min-width: 768px)" }),
     );
     expect(result.current).toBe(true);
   });
@@ -75,7 +75,7 @@ describe("useBreakpoint", () => {
     setScreenWidth(500);
 
     const { result } = renderHook(() =>
-      useBreakpoint({ raw: "(min-width: 768px)" })
+      useBreakpoint({ raw: "(min-width: 768px)" }),
     );
     expect(result.current).toBe(false);
   });
@@ -100,7 +100,7 @@ describe("useBreakpointReverse", () => {
     setScreenWidth(900);
 
     const { result } = renderHook(() =>
-      useBreakpointReverse({ min: "768px", max: "1024px" })
+      useBreakpointReverse({ min: "768px", max: "1024px" }),
     );
     expect(result.current).toBe(false);
   });
@@ -109,7 +109,7 @@ describe("useBreakpointReverse", () => {
     setScreenWidth(1100);
 
     const { result } = renderHook(() =>
-      useBreakpointReverse({ min: "768px", max: "1024px" })
+      useBreakpointReverse({ min: "768px", max: "1024px" }),
     );
     expect(result.current).toBe(true);
   });
@@ -118,7 +118,7 @@ describe("useBreakpointReverse", () => {
     setScreenWidth(768);
 
     const { result } = renderHook(() =>
-      useBreakpointReverse({ raw: "(min-width: 768px)" })
+      useBreakpointReverse({ raw: "(min-width: 768px)" }),
     );
     expect(result.current).toBe(false);
   });
@@ -127,7 +127,7 @@ describe("useBreakpointReverse", () => {
     setScreenWidth(500);
 
     const { result } = renderHook(() =>
-      useBreakpointReverse({ raw: "(min-width: 768px)" })
+      useBreakpointReverse({ raw: "(min-width: 768px)" }),
     );
     expect(result.current).toBe(true);
   });
@@ -150,13 +150,13 @@ describe("Lifecycle and event listener cleanup", () => {
 
     expect(addEventListenerMock).toHaveBeenCalledWith(
       "change",
-      expect.any(Function)
+      expect.any(Function),
     );
 
     unmount();
     expect(removeEventListenerMock).toHaveBeenCalledWith(
       "change",
-      expect.any(Function)
+      expect.any(Function),
     );
 
     vi.restoreAllMocks();

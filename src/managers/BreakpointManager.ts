@@ -40,7 +40,7 @@ export class BreakpointManager<Screens extends ScreensConfig> {
    * @returns The singleton `BreakpointManager` instance.
    */
   public static getInstance<Screens extends ScreensConfig>(
-    screens: Screens
+    screens: Screens,
   ): BreakpointManager<Screens> {
     const key = JSON.stringify(screens);
     if (!this.instances.has(key)) {

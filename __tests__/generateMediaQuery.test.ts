@@ -18,7 +18,7 @@ describe("generateMediaQuery", () => {
   it("should generate a media query for a valid array of strings", () => {
     const screens = ["768px", "1024px"] as const;
     expect(generateMediaQuery(screens)).toBe(
-      "(min-width: 768px), (min-width: 1024px)"
+      "(min-width: 768px), (min-width: 1024px)",
     );
   });
 
@@ -29,7 +29,7 @@ describe("generateMediaQuery", () => {
       { min: "768px", max: "1024px" },
     ];
     expect(generateMediaQuery(screens)).toBe(
-      "(min-width: 768px), (max-width: 1024px), (min-width: 768px) and (max-width: 1024px)"
+      "(min-width: 768px), (max-width: 1024px), (min-width: 768px) and (max-width: 1024px)",
     );
   });
 
@@ -38,11 +38,11 @@ describe("generateMediaQuery", () => {
   });
 
   it("should throw an error if the array contains null or undefined", () => {
-    // @ts-expect-error
+    // @ts-expect-error (function () => generateMediaQuery(["768px", null]) should throw an error)
     expect(() => generateMediaQuery(["768px", null])).toThrow(MediaQueryError);
-    // @ts-expect-error
+    // @ts-expect-error (function () => generateMediaQuery([undefined, "1024px"]) should throw an error)
     expect(() => generateMediaQuery([undefined, "1024px"])).toThrow(
-      MediaQueryError
+      MediaQueryError,
     );
   });
 
@@ -54,7 +54,7 @@ describe("generateMediaQuery", () => {
   it("should generate a media query for an object with min and max properties", () => {
     const screen: Screen = { min: "768px", max: "1024px" };
     expect(generateMediaQuery(screen)).toBe(
-      "(min-width: 768px) and (max-width: 1024px)"
+      "(min-width: 768px) and (max-width: 1024px)",
     );
   });
 
@@ -69,6 +69,7 @@ describe("generateMediaQuery", () => {
   });
 
   it("should throw an error for an object with invalid properties", () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const screen: any = { foo: "bar" };
     expect(() => generateMediaQuery(screen)).toThrow(MediaQueryError);
   });
@@ -81,11 +82,11 @@ describe("generateMediaQuery", () => {
   });
 
   it("should throw an error for unsupported types", () => {
-    // @ts-expect-error
+    // @ts-expect-error (function () => generateMediaQuery(123) should throw an error)
     expect(() => generateMediaQuery(123)).toThrow(MediaQueryError);
-    // @ts-expect-error
+    // @ts-expect-error (function () => generateMediaQuery(null) should throw an error)
     expect(() => generateMediaQuery(null)).toThrow(MediaQueryError);
-    // @ts-expect-error
+    // @ts-expect-error (function () => generateMediaQuery(undefined) should throw an error)
     expect(() => generateMediaQuery(undefined)).toThrow(MediaQueryError);
   });
 

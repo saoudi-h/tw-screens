@@ -29,7 +29,7 @@ export interface UseBreakpointOptions {
  */
 export function useBreakpoint(
   breakpoint: ScreenValue,
-  options?: UseBreakpointOptions
+  options?: UseBreakpointOptions,
 ): boolean {
   const [matches, setMatches] = useState<boolean>(false);
 

@@ -21,7 +21,7 @@ describe("BreakpointManager", () => {
             if (event === "change") {
               mediaQueryCallbacks[query].push(callback);
             }
-          }
+          },
         ),
         removeEventListener: vi.fn(
           (event: string, callback: (e: MediaQueryListEvent) => void) => {
@@ -31,7 +31,7 @@ describe("BreakpointManager", () => {
                 mediaQueryCallbacks[query].splice(index, 1);
               }
             }
-          }
+          },
         ),
         dispatchEvent: vi.fn(),
         onchange: null,
@@ -91,7 +91,7 @@ describe("BreakpointManager", () => {
       const manager = BreakpointManager.getInstance(screens);
 
       expect(() => manager.getBreakpointState("lg")).toThrow(
-        'Breakpoint "lg" is not defined'
+        'Breakpoint "lg" is not defined',
       );
     });
   });

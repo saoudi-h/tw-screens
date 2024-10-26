@@ -3,8 +3,8 @@ import { create } from "../src/managers/create";
 import { describe, it, expect, vi } from "vitest";
 import { defaultScreens, BreakpointManager } from "@/managers";
 
-
 declare global {
+  // eslint-disable-next-line
   var setScreenWidth: (width: number) => void;
 }
 
@@ -103,7 +103,7 @@ describe("useScreenValue", () => {
     });
 
     const { result } = renderHook(() =>
-      useScreenValue("md", "matched", "not matched")
+      useScreenValue("md", "matched", "not matched"),
     );
 
     expect(result.current).toBe("matched");
@@ -113,7 +113,7 @@ describe("useScreenValue", () => {
     setScreenWidth(700);
 
     const { result } = renderHook(() =>
-      useScreenValue("md", "matched", "not matched")
+      useScreenValue("md", "matched", "not matched"),
     );
 
     expect(result.current).toBe("not matched");
@@ -212,7 +212,7 @@ describe("Default screens functionality", () => {
   it("should return correct values with useScreenValue for default screens", () => {
     setScreenWidth(640);
     const { result } = renderHook(() =>
-      useDefaultScreenValue("sm", "matched", "not matched")
+      useDefaultScreenValue("sm", "matched", "not matched"),
     );
     expect(result.current).toBe("matched");
   });

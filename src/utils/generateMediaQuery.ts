@@ -10,7 +10,10 @@ export class MediaQueryError extends Error {
    * @param message - A description of the error.
    * @param input - The value that caused the error.
    */
-  constructor(message: string, public input?: unknown) {
+  constructor(
+    message: string,
+    public input?: unknown,
+  ) {
     super(message);
     this.name = "MediaQueryError";
   }
@@ -42,7 +45,7 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
     if (screenValue == null) {
       throw new MediaQueryError(
         "Screen value cannot be null or undefined",
-        screenValue
+        screenValue,
       );
     }
 
@@ -54,7 +57,7 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
       if (!unitRegex.test(screenValue)) {
         throw new MediaQueryError(
           "Invalid unit format. Must end with px, em, rem, vh, or vw",
-          screenValue
+          screenValue,
         );
       }
       return `(min-width: ${screenValue})`;
@@ -80,12 +83,12 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
       const validProperties = new Set(["raw", "min", "max"]);
 
       const hasValidProperty = Object.keys(screenValue).some((key) =>
-        validProperties.has(key)
+        validProperties.has(key),
       );
       if (!hasValidProperty) {
         throw new MediaQueryError(
           "Screen object must contain at least one valid property (raw, min, or max)",
-          screenValue
+          screenValue,
         );
       }
 
@@ -93,7 +96,7 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
         if (typeof screenValue.raw !== "string") {
           throw new MediaQueryError(
             "Raw value must be a string",
-            screenValue.raw
+            screenValue.raw,
           );
         }
         if (screenValue.raw.trim()) {
@@ -105,13 +108,13 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
         if (typeof screenValue.min !== "string") {
           throw new MediaQueryError(
             "Min value must be a string",
-            screenValue.min
+            screenValue.min,
           );
         }
         if (!unitRegex.test(screenValue.min)) {
           throw new MediaQueryError(
             "Invalid min unit format. Must end with px, em, rem, vh, or vw",
-            screenValue.min
+            screenValue.min,
           );
         }
         conditions.push(`(min-width: ${screenValue.min})`);
@@ -121,13 +124,13 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
         if (typeof screenValue.max !== "string") {
           throw new MediaQueryError(
             "Max value must be a string",
-            screenValue.max
+            screenValue.max,
           );
         }
         if (!unitRegex.test(screenValue.max)) {
           throw new MediaQueryError(
             "Invalid max unit format. Must end with px, em, rem, vh, or vw",
-            screenValue.max
+            screenValue.max,
           );
         }
         conditions.push(`(max-width: ${screenValue.max})`);
@@ -136,7 +139,7 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
       if (conditions.length === 0) {
         throw new MediaQueryError(
           "No valid conditions found in screen object",
-          screenValue
+          screenValue,
         );
       }
 
@@ -150,7 +153,7 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
     }
     throw new MediaQueryError(
       "Unexpected error while generating media query",
-      screenValue
+      screenValue,
     );
   }
 }
