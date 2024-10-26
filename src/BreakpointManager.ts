@@ -1,5 +1,5 @@
 import { generateMediaQuery } from "./generateMediaQuery";
-import type { Screen, ScreensConfig } from "./types";
+import type { ScreensConfig, ScreenValue } from "./types";
 
 type Callback = (matches: boolean) => void;
 
@@ -56,13 +56,13 @@ class BreakpointManager<Screens extends ScreensConfig> {
 
   private init(): void {
     const breakpoints = Array.isArray(this.screens)
-      ? this.screens.map((_, index) => String(index))
+      ? this.screens
       : Object.keys(this.screens);
 
     breakpoints.forEach((name) => {
       const screenValue = Array.isArray(this.screens)
-        ? this.screens[Number(name)]
-        : (this.screens as Record<string, string | Screen | Screen[]>)[name];
+        ? name
+        : (this.screens as ScreenValue[])[name];
 
       this.setupBreakpoint(name, screenValue);
     });
@@ -70,7 +70,7 @@ class BreakpointManager<Screens extends ScreensConfig> {
 
   private setupBreakpoint(
     name: string,
-    screenValue: string | Screen | Screen[]
+    screenValue: ScreenValue
   ): void {
     const mediaQuery = generateMediaQuery(screenValue);
 

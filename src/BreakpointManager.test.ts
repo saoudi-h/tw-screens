@@ -185,8 +185,8 @@ describe("BreakpointManager", () => {
       const screens = ["640px", "768px"];
       const manager = BreakpointManager.getInstance(screens);
 
-      expect(manager.getBreakpointState("0")).toBe(true);
-      expect(manager.getBreakpointState("1")).toBe(true);
+      expect(manager.getBreakpointState("640px")).toBe(true);
+      expect(manager.getBreakpointState("768px")).toBe(true);
     });
   });
 

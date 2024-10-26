@@ -13,7 +13,7 @@ const screens = {
   lg: "1024px",
   xl: "1280px",
   custom: { min: "640px", max: "768px" },
-} as const;
+} as const
 
 const {
   useScreen,

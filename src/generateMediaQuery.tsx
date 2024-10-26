@@ -1,4 +1,6 @@
-import type { Screen } from "./types";
+import type { Screen, ScreenValue } from "./types";
+
+
 
 const unitRegex = /^\s*\d+(\.\d+)?(px|em|rem|vh|vw)\s*$/;
 
@@ -9,9 +11,7 @@ export class MediaQueryError extends Error {
   }
 }
 
-export function generateMediaQuery(
-  screenValue: string | Screen | Screen[]
-): string {
+export function generateMediaQuery(screenValue: ScreenValue): string {
   try {
     if (screenValue == null) {
       throw new MediaQueryError(
