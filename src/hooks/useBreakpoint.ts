@@ -24,7 +24,9 @@ export interface UseBreakpointOptions {
  * ```typescript
  * const isMediumScreen = useBreakpoint("768px");
  * const isSmallScreen = useBreakpoint({ max: "480px" });
- * const isLargeScreenInverted = useBreakpoint("1024px", { reverse: true });
+ * const isMobile = useBreakpoint("680px", { reverse: true });
+ * const isXS = useBreakpointReverse("480px");
+ * const isLandscape = useBreakpointReverse({ raw: "(orientation: landscape)" });
  * ```
  */
 export function useBreakpoint(

@@ -2,7 +2,7 @@
 
 ***
 
-[tw-screens](../globals.md) / useBreakpoint
+[tw-screens](../README.md) / useBreakpoint
 
 # Function: useBreakpoint()
 
@@ -31,9 +31,11 @@ Optional settings to reverse the matching logic.
 ```typescript
 const isMediumScreen = useBreakpoint("768px");
 const isSmallScreen = useBreakpoint({ max: "480px" });
-const isLargeScreenInverted = useBreakpoint("1024px", { reverse: true });
+const isMobile = useBreakpoint("680px", { reverse: true });
+const isXS = useBreakpointReverse("480px");
+const isLandscape = useBreakpointReverse({ raw: "(orientation: landscape)" });
 ```
 
 ## Defined in
 
-[hooks/useBreakpoint.ts:31](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/hooks/useBreakpoint.ts#L31)
+[hooks/useBreakpoint.ts:32](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/hooks/useBreakpoint.ts#L32)

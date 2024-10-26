@@ -2,7 +2,7 @@
 
 ***
 
-[tw-screens](../globals.md) / DependencyList
+[tw-screens](../README.md) / DependencyList
 
 # Type Alias: DependencyList
 
@@ -13,4 +13,4 @@ to specify dependencies for re-runs.
 
 ## Defined in
 
-[utils/types.ts:44](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/utils/types.ts#L44)
+[utils/types.ts:45](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/utils/types.ts#L45)

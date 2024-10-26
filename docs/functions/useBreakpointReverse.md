@@ -2,7 +2,7 @@
 
 ***
 
-[tw-screens](../globals.md) / useBreakpointReverse
+[tw-screens](../README.md) / useBreakpointReverse
 
 # Function: useBreakpointReverse()
 
@@ -27,10 +27,11 @@ The breakpoint to match, provided as a screen size value.
 ## Example
 
 ```typescript
-const isNotMediumScreen = useBreakpointReverse("768px");
-const isNotSmallScreen = useBreakpointReverse({ max: "480px" });
+const isMobile = useBreakpointReverse("680px");
+const isDesktop = useBreakpointReverse({ max: "480px" });
+const isMobile = useBreakpointReverse({ min: "480px" });
 ```
 
 ## Defined in
 
-[hooks/useBreakpointReverse.ts:19](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/hooks/useBreakpointReverse.ts#L19)
+[hooks/useBreakpointReverse.ts:19](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/hooks/useBreakpointReverse.ts#L19)

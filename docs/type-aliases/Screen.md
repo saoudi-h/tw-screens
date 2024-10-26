@@ -2,7 +2,7 @@
 
 ***
 
-[tw-screens](../globals.md) / Screen
+[tw-screens](../README.md) / Screen
 
 # Type Alias: Screen
 
@@ -19,4 +19,4 @@ both min and max width values. Example configurations include:
 
 ## Defined in
 
-[utils/types.ts:17](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/utils/types.ts#L17)
+[utils/types.ts:18](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/utils/types.ts#L18)

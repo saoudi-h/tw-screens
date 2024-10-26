@@ -3,7 +3,10 @@
  * and values are of type `V` (default: `string`).
  */
 // eslint-disable-next-line
-type KeyValuePair<K extends keyof any = string, V = string> = Record<K, V>;
+export type KeyValuePair<K extends keyof any = string, V = string> = Record<
+  K,
+  V
+>;
 
 /**
  * Defines the structure of a screen configuration object used in responsive design.

@@ -2,7 +2,7 @@
 
 ***
 
-[tw-screens](../globals.md) / CreateResult
+[tw-screens](../README.md) / CreateResult
 
 # Interface: CreateResult\<Screens\>
 
@@ -31,7 +31,7 @@ The singleton instance of `BreakpointManager`.
 
 #### Defined in
 
-[managers/create.ts:79](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/managers/create.ts#L79)
+[managers/create.ts:79](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L79)
 
 ***
 
@@ -59,7 +59,7 @@ Options to modify the matching behavior.
 
 #### Defined in
 
-[managers/create.ts:28](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/managers/create.ts#L28)
+[managers/create.ts:28](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L28)
 
 ***
 
@@ -89,7 +89,7 @@ Optional dependencies to control when the effect should re-run.
 
 #### Defined in
 
-[managers/create.ts:52](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/managers/create.ts#L52)
+[managers/create.ts:52](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L52)
 
 ***
 
@@ -113,7 +113,7 @@ The name of the breakpoint to check.
 
 #### Defined in
 
-[managers/create.ts:40](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/managers/create.ts#L40)
+[managers/create.ts:40](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L40)
 
 ***
 
@@ -151,4 +151,4 @@ Either `valid` or `invalid` based on the match state.
 
 #### Defined in
 
-[managers/create.ts:67](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/managers/create.ts#L67)
+[managers/create.ts:67](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L67)

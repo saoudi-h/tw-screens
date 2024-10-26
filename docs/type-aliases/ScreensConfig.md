@@ -2,11 +2,11 @@
 
 ***
 
-[tw-screens](../globals.md) / ScreensConfig
+[tw-screens](../README.md) / ScreensConfig
 
 # Type Alias: ScreensConfig
 
-> **ScreensConfig**: `string`[] \| readonly `string`[] \| `KeyValuePair`\<`string`, `string` \| [`Screen`](Screen.md) \| [`Screen`](Screen.md)[]\>
+> **ScreensConfig**: `string`[] \| readonly `string`[] \| [`KeyValuePair`](KeyValuePair.md)\<`string`, `string` \| [`Screen`](Screen.md) \| [`Screen`](Screen.md)[]\>
 
 Configures a set of screens for responsive breakpoints.
 - Can be an array or readonly array of screen strings.
@@ -15,4 +15,4 @@ Configures a set of screens for responsive breakpoints.
 
 ## Defined in
 
-[utils/types.ts:29](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/utils/types.ts#L29)
+[utils/types.ts:30](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/utils/types.ts#L30)

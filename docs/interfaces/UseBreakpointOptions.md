@@ -2,7 +2,7 @@
 
 ***
 
-[tw-screens](../globals.md) / UseBreakpointOptions
+[tw-screens](../README.md) / UseBreakpointOptions
 
 # Interface: UseBreakpointOptions
 
@@ -19,4 +19,4 @@ Default is `false`.
 
 #### Defined in
 
-[hooks/useBreakpoint.ts:14](https://github.com/saoudi-h/tw-screens/blob/a1ea34fff45e5eeab9ecdc2f92def89c098aafa0/src/hooks/useBreakpoint.ts#L14)
+[hooks/useBreakpoint.ts:13](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/hooks/useBreakpoint.ts#L13)

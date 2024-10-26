@@ -11,8 +11,9 @@ import { useBreakpoint } from "@/hooks";
  *
  * @example
  * ```typescript
- * const isNotMediumScreen = useBreakpointReverse("768px");
- * const isNotSmallScreen = useBreakpointReverse({ max: "480px" });
+ * const isMobile = useBreakpointReverse("680px");
+ * const isDesktop = useBreakpointReverse({ max: "480px" });
+ * const isMobile = useBreakpointReverse({ min: "480px" });
  * ```
  */
 export function useBreakpointReverse(breakpoint: ScreenValue): boolean {
