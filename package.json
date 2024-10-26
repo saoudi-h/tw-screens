@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -40,9 +41,12 @@
     "responsive",
     "media-query",
     "typescript",
-    "pnpm"
+    "pnpm",
+    "npm",
+    "nextjs",
+    "design-system"
   ],
-  "author": "Votre Nom",
+  "author": "Hakim Saoudi",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/saoudi-h/tw-screens/issues"
