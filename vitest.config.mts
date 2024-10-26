@@ -2,18 +2,18 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    globals: true,
     environment: "jsdom",
+    globals: true,
+    setupFiles: ["./vitest.setup.mts"],
     coverage: {
       provider: "v8",
-      reportsDirectory: "./coverage", 
-      all: true, 
-      exclude: ["node_modules", "dist", "tests", "vitest.config.ts"],
+      reporter: ["text", "json", "html"],
     },
+    exclude: ["node_modules", "dist", "tests", "vitest.config.mts"],
   },
   resolve: {
     alias: {
-      "@": "/src", 
+      "@": "/src",
     },
   },
 });
