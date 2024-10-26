@@ -1,12 +1,12 @@
 import BreakpointManager from "./BreakpointManager";
 import type { DependencyList, ScreensConfig } from "./types";
 import { useIsomorphicEffect } from "./utils";
-import { useMemo, useState, useCallback } from "react";
+import { useMemo, useState } from "react";
+import { defaultScreens } from "./defaultScreens";
 
 export interface UseScreenOptions {
   reverse?: boolean;
 }
-
 
 export interface CreateResult<Screens extends ScreensConfig> {
   useScreen: (
@@ -36,8 +36,9 @@ export interface CreateResult<Screens extends ScreensConfig> {
   ) => T | U;
   useBreakpointManager: () => BreakpointManager<Screens>;
 }
-export function create<Screens extends ScreensConfig>(
-  screens: Screens
+
+export function create<Screens extends ScreensConfig = typeof defaultScreens>(
+  screens: Screens = defaultScreens as any
 ): CreateResult<Screens> {
   const manager = BreakpointManager.getInstance(screens);
 

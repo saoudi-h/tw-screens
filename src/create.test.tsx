@@ -2,6 +2,7 @@ import { renderHook, act } from "@testing-library/react";
 import { create } from "./create";
 import { describe, it, expect, vi } from "vitest";
 import BreakpointManager from "./BreakpointManager";
+import { defaultScreens } from "./defaultScreens";
 
 declare global {
   var setScreenWidth: (width: number) => void;
@@ -164,5 +165,56 @@ describe("Dynamic screen size changes", () => {
     });
 
     expect(result.current).toBe(true);
+  });
+});
+
+
+describe("Default screens functionality", () => {
+  const {
+    useScreen: useDefaultScreen,
+    useScreenReverse: useDefaultScreenReverse,
+    useScreenEffect: useDefaultScreenEffect,
+    useScreenValue: useDefaultScreenValue,
+    useBreakpointManager: useDefaultBreakpointManager,
+  } = create(); 
+
+  it("should use default screens when no screens are provided", () => {
+    const manager = useDefaultBreakpointManager();
+    const states = manager.getAllBreakpointStates();
+    expect(Object.keys(states)).toEqual(Object.keys(defaultScreens));
+  });
+
+  it("should return true for default breakpoint match (e.g., 'lg')", () => {
+    setScreenWidth(1024);
+    const { result } = renderHook(() => useDefaultScreen("lg"));
+    expect(result.current).toBe(true);
+  });
+
+  it("should return false for default breakpoint mismatch (e.g., 'xl')", () => {
+    setScreenWidth(800);
+    const { result } = renderHook(() => useDefaultScreen("xl"));
+    expect(result.current).toBe(false);
+  });
+
+  it("should work with useScreenReverse using default screens", () => {
+    setScreenWidth(1200);
+    const { result } = renderHook(() => useDefaultScreenReverse("xl"));
+    expect(result.current).toBe(true);
+  });
+
+  it("should trigger effect with default screens in useScreenEffect", () => {
+    const effect = vi.fn();
+    setScreenWidth(768);
+
+    renderHook(() => useDefaultScreenEffect("md", effect));
+    expect(effect).toHaveBeenCalledWith(true);
+  });
+
+  it("should return correct values with useScreenValue for default screens", () => {
+    setScreenWidth(640);
+    const { result } = renderHook(() =>
+      useDefaultScreenValue("sm", "matched", "not matched")
+    );
+    expect(result.current).toBe("matched");
   });
 });
