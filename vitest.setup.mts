@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import "@testing-library/jest-dom/vitest";
 import { vi } from "vitest";
 
@@ -13,17 +14,14 @@ if (typeof window.MediaQueryListEvent === "undefined") {
     }
   }
 
-
   (window as any).MediaQueryListEvent = MediaQueryListEvent;
 }
-
 
 globalThis.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),
   disconnect: vi.fn(),
 }));
-
 
 let currentWidth = 1024;
 
