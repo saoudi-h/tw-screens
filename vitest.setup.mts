@@ -67,43 +67,35 @@ function evalMediaQuery(query: string, width: number): boolean {
 
 // @ts-expect-error
 window.matchMedia = (query: string): MediaQueryListMock => {
-  if (mediaQueryLists.has(query)) {
-    return mediaQueryLists.get(query)!;
-  }
+  if (mediaQueryLists.has(query)) return mediaQueryLists.get(query)!;
 
   const mql: MediaQueryListMock = {
     matches: evalMediaQuery(query, currentWidth),
     media: query,
     listeners: [],
     onchange: null,
-    addListener: function (listener) {
+    addListener(listener) {
       if (listener) this.listeners.push(listener);
     },
-    removeListener: function (listener) {
-      if (listener) {
+    removeListener(listener) {
+      if (listener)
         this.listeners = this.listeners.filter((l) => l !== listener);
-      }
     },
-    addEventListener: function (type, listener) {
-      if (type === "change" && listener) {
-        this.listeners.push(listener);
-      }
+    addEventListener(type, listener) {
+      if (type === "change" && listener) this.listeners.push(listener);
     },
-    removeEventListener: function (type, listener) {
+    removeEventListener(type, listener) {
       if (type === "change" && listener) {
         this.listeners = this.listeners.filter((l) => l !== listener);
       }
     },
-    dispatchEvent: function (event: MediaQueryListEvent): boolean {
-      this.listeners.forEach((listener) => {
-        listener.call(this, event);
-      });
+    dispatchEvent(event: MediaQueryListEvent): boolean {
+      this.listeners.forEach((listener) => listener.call(this, event));
       return true;
     },
   };
 
   mediaQueryLists.set(query, mql);
-
   return mql;
 };
 

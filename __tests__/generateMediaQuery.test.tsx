@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { generateMediaQuery, MediaQueryError } from "./generateMediaQuery";
-import type { Screen } from "./types";
+import type { Screen } from "@/utils";
+import { generateMediaQuery, MediaQueryError } from "@/utils";
 
 describe("generateMediaQuery", () => {
   it("should generate a media query for a valid string", () => {

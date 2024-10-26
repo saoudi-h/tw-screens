@@ -1,6 +1,4 @@
-import type { Screen, ScreenValue } from "./types";
-
-
+import type { ScreenValue } from "./types";
 
 const unitRegex = /^\s*\d+(\.\d+)?(px|em|rem|vh|vw)\s*$/;
 

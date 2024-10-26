@@ -1,9 +1,9 @@
-import { generateMediaQuery } from "./generateMediaQuery";
-import type { ScreensConfig, ScreenValue } from "./types";
+import { generateMediaQuery } from "@/utils";
+import { ScreensConfig, ScreenValue } from "@/utils/types";
 
 type Callback = (matches: boolean) => void;
 
-class BreakpointManager<Screens extends ScreensConfig> {
+export class BreakpointManager<Screens extends ScreensConfig> {
   static instances = new Map<string, BreakpointManager<any>>();
   private readonly breakpointsState: Record<string, boolean> = {};
   private readonly subscribers: Record<string, Set<Callback>> = {};
@@ -68,10 +68,7 @@ class BreakpointManager<Screens extends ScreensConfig> {
     });
   }
 
-  private setupBreakpoint(
-    name: string,
-    screenValue: ScreenValue
-  ): void {
+  private setupBreakpoint(name: string, screenValue: ScreenValue): void {
     const mediaQuery = generateMediaQuery(screenValue);
 
     if (typeof window !== "undefined" && window.matchMedia) {
@@ -104,5 +101,3 @@ class BreakpointManager<Screens extends ScreensConfig> {
     this.instances.clear();
   }
 }
-
-export default BreakpointManager;

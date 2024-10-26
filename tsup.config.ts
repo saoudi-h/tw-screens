@@ -7,7 +7,7 @@ export default defineConfig(({ watch }) => ({
   dts: true,
   sourcemap: true,
   clean: true,
-  splitting: false,
+  splitting: true,
   target: "esnext",
   external: ["react"],
   minify: !watch,

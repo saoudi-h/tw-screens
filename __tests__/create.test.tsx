@@ -1,8 +1,8 @@
 import { renderHook, act } from "@testing-library/react";
-import { create } from "./create";
+import { create } from "../src/managers/create";
 import { describe, it, expect, vi } from "vitest";
-import BreakpointManager from "./BreakpointManager";
-import { defaultScreens } from "./defaultScreens";
+import { defaultScreens, BreakpointManager } from "@/managers";
+
 
 declare global {
   var setScreenWidth: (width: number) => void;
@@ -14,7 +14,7 @@ const screens = {
   lg: "1024px",
   xl: "1280px",
   custom: { min: "640px", max: "768px" },
-} as const
+} as const;
 
 const {
   useScreen,
@@ -66,7 +66,7 @@ describe("useScreenReverse", () => {
 
     const { result } = renderHook(() => useScreenReverse("lg"));
 
-      expect(result.current).toBe(true);
+    expect(result.current).toBe(true);
   });
 });
 
@@ -116,7 +116,7 @@ describe("useScreenValue", () => {
       useScreenValue("md", "matched", "not matched")
     );
 
-      expect(result.current).toBe("not matched");
+    expect(result.current).toBe("not matched");
   });
 });
 
@@ -140,13 +140,13 @@ describe("Dynamic screen size changes", () => {
     setScreenWidth(700);
     const { result } = renderHook(() => useScreen("md"));
 
-      expect(result.current).toBe(false);
+    expect(result.current).toBe(false);
 
     act(() => {
       setScreenWidth(800);
     });
 
-      expect(result.current).toBe(true);
+    expect(result.current).toBe(true);
   });
 });
 
@@ -168,7 +168,6 @@ describe("Dynamic screen size changes", () => {
   });
 });
 
-
 describe("Default screens functionality", () => {
   const {
     useScreen: useDefaultScreen,
@@ -176,7 +175,7 @@ describe("Default screens functionality", () => {
     useScreenEffect: useDefaultScreenEffect,
     useScreenValue: useDefaultScreenValue,
     useBreakpointManager: useDefaultBreakpointManager,
-  } = create(); 
+  } = create();
 
   it("should use default screens when no screens are provided", () => {
     const manager = useDefaultBreakpointManager();

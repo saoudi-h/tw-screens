@@ -1,8 +1,8 @@
-import BreakpointManager from "./BreakpointManager";
-import type { DependencyList, ScreensConfig } from "./types";
-import { useIsomorphicEffect } from "./utils";
+import type { DependencyList, ScreensConfig } from "@/utils";
 import { useMemo, useState } from "react";
 import { defaultScreens } from "./defaultScreens";
+import { useIsomorphicEffect } from "@/utils";
+import { BreakpointManager } from "./BreakpointManager";
 
 export interface UseScreenOptions {
   reverse?: boolean;

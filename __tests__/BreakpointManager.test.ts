@@ -1,5 +1,5 @@
+import { BreakpointManager } from "@/managers";
 import { describe, beforeEach, afterEach, it, expect, vi } from "vitest";
-import BreakpointManager from "./BreakpointManager";
 
 describe("BreakpointManager", () => {
   type MediaQueryCallbacks = {
