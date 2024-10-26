@@ -2,13 +2,41 @@ import type { ScreenValue } from "./types";
 
 const unitRegex = /^\s*\d+(\.\d+)?(px|em|rem|vh|vw)\s*$/;
 
+/**
+ * Custom error class for errors related to media query generation.
+ */
 export class MediaQueryError extends Error {
+  /**
+   * @param message - A description of the error.
+   * @param input - The value that caused the error.
+   */
   constructor(message: string, public input?: unknown) {
     super(message);
     this.name = "MediaQueryError";
   }
 }
 
+/**
+ * Generates a CSS media query based on a provided screen value.
+ *
+ * @param screenValue - The screen value to generate the query for.
+ * This can be a string, an object with `raw`, `min`, or `max` properties,
+ * or an array of screen values.
+ * @returns A string containing the generated media query.
+ * @throws `MediaQueryError` if the screen value is invalid.
+ *
+ * The function handles three main types of input:
+ * - **String**: A simple media query with a min-width.
+ * - **Array**: A combined query where each entry is a separate query.
+ * - **Object**: An object that can define complex queries using properties
+ *   like `raw`, `min`, and `max`.
+ *
+ * ### Examples:
+ * ```typescript
+ * generateMediaQuery("768px"); // Returns "(min-width: 768px)"
+ * generateMediaQuery({ min: "640px", max: "1024px" }); // Returns "(min-width: 640px) and (max-width: 1024px)"
+ * ```
+ */
 export function generateMediaQuery(screenValue: ScreenValue): string {
   try {
     if (screenValue == null) {
@@ -18,6 +46,7 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
       );
     }
 
+    // Handle string input
     if (typeof screenValue === "string") {
       if (!screenValue.trim()) {
         throw new MediaQueryError("Screen value cannot be an empty string");
@@ -31,6 +60,7 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
       return `(min-width: ${screenValue})`;
     }
 
+    // Handle array input
     if (Array.isArray(screenValue)) {
       if (screenValue.length === 0) {
         throw new MediaQueryError("Screen array cannot be empty");
@@ -44,6 +74,7 @@ export function generateMediaQuery(screenValue: ScreenValue): string {
       return queries.join(", ");
     }
 
+    // Handle object input with "raw", "min", or "max" properties
     if (typeof screenValue === "object") {
       const conditions: string[] = [];
       const validProperties = new Set(["raw", "min", "max"]);
