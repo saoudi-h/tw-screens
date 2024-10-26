@@ -3,6 +3,7 @@ import { useBreakpoint, useBreakpointReverse } from "../src/hooks";
 import { describe, it, expect, vi, afterEach } from "vitest";
 
 declare global {
+  // eslint-disable-next-line
   var setScreenWidth: (width: number) => void;
 }
 

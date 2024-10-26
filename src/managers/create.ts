@@ -87,7 +87,10 @@ export interface CreateResult<Screens extends ScreensConfig> {
  * Defaults to `defaultScreens`.
  * @returns A collection of hooks for using, observing, and managing screen breakpoints.
  */
+
+ 
 export function create<Screens extends ScreensConfig = typeof defaultScreens>(
+  // eslint-disable-next-line
   screens: Screens = defaultScreens as any
 ): CreateResult<Screens> {
   const manager = BreakpointManager.getInstance(screens);

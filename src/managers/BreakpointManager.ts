@@ -11,6 +11,7 @@ type Callback = (matches: boolean) => void;
  */
 export class BreakpointManager<Screens extends ScreensConfig> {
   /** Map of instances for each unique screen configuration */
+  // eslint-disable-next-line
   static instances = new Map<string, BreakpointManager<any>>();
 
   /** Stores the current match state for each breakpoint */

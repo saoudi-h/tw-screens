@@ -1,4 +1,3 @@
-import React from "react";
 import { ScreenValue } from "@/utils";
 import { useState } from "react";
 import { generateMediaQuery, useIsomorphicEffect } from "@/utils";

@@ -2,6 +2,7 @@
  * Type representing a key-value pair where keys are of type `K` (default: `string`)
  * and values are of type `V` (default: `string`).
  */
+// eslint-disable-next-line
 type KeyValuePair<K extends keyof any = string, V = string> = Record<K, V>;
 
 /**
