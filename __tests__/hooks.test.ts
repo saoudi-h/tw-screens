@@ -1,4 +1,4 @@
-import { renderHook, act } from "@testing-library/react";
+import { renderHook } from "@testing-library/react";
 import { useBreakpoint, useBreakpointReverse } from "../src/hooks";
 import { describe, it, expect, vi, afterEach } from "vitest";
 
