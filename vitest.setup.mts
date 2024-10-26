@@ -65,7 +65,7 @@ function evalMediaQuery(query: string, width: number): boolean {
   return width >= minWidth && width <= maxWidth;
 }
 
-// @ts-expect-error
+// @ts-expect-error This is an incomplete Mock implementation.
 window.matchMedia = (query: string): MediaQueryListMock => {
   if (mediaQueryLists.has(query)) return mediaQueryLists.get(query)!;
 
