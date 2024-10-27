@@ -51,6 +51,9 @@
   "bugs": {
     "url": "https://github.com/saoudi-h/tw-screens/issues"
   },
+    "engines": {
+    "node": ">=16"
+  },
   "homepage": "https://github.com/saoudi-h/tw-screens#readme",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
