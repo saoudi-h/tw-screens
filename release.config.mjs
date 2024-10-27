@@ -4,28 +4,26 @@
 
 export default {
   repositoryUrl: "https://github.com/saoudi-h/tw-screens.git",
-  tagFormat: "v${version}",
-  releaseNotesFilename: "CHANGELOG.md",
-  publish: true,
-  ci: true,
   branches: ["main"],
   preset: "conventionalcommits",
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     "@semantic-release/changelog",
-    ["@semantic-release/npm", { npmPublish: true }],
+    [
+      "@semantic-release/npm",
+      {
+        npmPublish: true,
+      },
+    ],
     [
       "@semantic-release/git",
       {
-        assets: ["CHANGELOG.md", "README.md", "package.json", "pnpm-lock.yaml"],
+        assets: ["CHANGELOG.md", "package.json", "pnpm-lock.yaml"],
+        message:
+          "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
-    [
-      "@semantic-release/github",
-      {
-        assets: "dist/*.js",
-      },
-    ],
+    "@semantic-release/github",
   ],
 };
