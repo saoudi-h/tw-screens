@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18, 20]
+        node-version: [20.9]
 
     steps:
       - name: Check out the code
