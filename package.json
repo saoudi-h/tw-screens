@@ -34,9 +34,6 @@
     "type": "git",
     "url": "https://github.com/saoudi-h/tw-screens.git"
   },
-  "release": {
-    "repositoryUrl": "https://${GH_TOKEN}@github.com/saoudi-h/tw-screens.git"
-  },
   "keywords": [
     "react",
     "tailwindcss",

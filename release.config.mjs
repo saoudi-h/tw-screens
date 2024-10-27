@@ -1,4 +1,13 @@
+/**
+ * @type {import('semantic-release').GlobalConfig}
+ */
+
 export default {
+  repositoryUrl: "https://github.com/saoudi-h/tw-screens.git",
+  tagFormat: "v${version}",
+  releaseNotesFilename: "CHANGELOG.md",
+  publish: true,
+  ci: true,
   branches: ["main"],
   preset: "conventionalcommits",
   plugins: [
