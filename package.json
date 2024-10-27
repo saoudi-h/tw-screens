@@ -20,6 +20,7 @@
     "clean": "del-cli node_modules dist",
     "prepare": "pnpm build && pnpm husky",
     "prepublishOnly": "pnpm run test && pnpm run lint",
+    "release": "semantic-release",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
@@ -51,7 +52,7 @@
   "bugs": {
     "url": "https://github.com/saoudi-h/tw-screens/issues"
   },
-    "engines": {
+  "engines": {
     "node": ">=16"
   },
   "homepage": "https://github.com/saoudi-h/tw-screens#readme",
@@ -74,6 +75,7 @@
     "prettier": "3.3.3",
     "react": "18.3.1",
     "react-dom": "^18.3.1",
+    "semantic-release": "^24.2.0",
     "tailwindcss": "^3.2.0",
     "tsup": "^8.3.4",
     "typedoc": "^0.26.10",
