@@ -34,6 +34,9 @@
     "type": "git",
     "url": "https://github.com/saoudi-h/tw-screens.git"
   },
+  "release": {
+    "repositoryUrl": "https://${GH_TOKEN}@github.com/saoudi-h/tw-screens.git"
+  },
   "keywords": [
     "react",
     "tailwindcss",
@@ -58,6 +61,12 @@
   "homepage": "https://github.com/saoudi-h/tw-screens#readme",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.0",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.1",
     "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/react": "^16.0.1",
     "@types/react": "^18.2.0",
