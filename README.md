@@ -28,7 +28,7 @@
 
 ## Installation
 
-Install `tw-screens` via npm or yarn:
+Install `tw-screens` via npm, yarn or pnpm:
 
 ```sh
 npm install tw-screens
@@ -38,6 +38,12 @@ or
 
 ```sh
 yarn add tw-screens
+```
+
+or
+
+```sh
+pnpm add tw-screens
 ```
 
 ---
