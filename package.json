@@ -47,7 +47,11 @@
     "nextjs",
     "design-system"
   ],
-  "author": "Hakim Saoudi",
+  "author": {
+    "name": "Saoudi Hakim",
+    "url": "https://hakimsaoudi.dev",
+    "email": "saoudihakim@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/saoudi-h/tw-screens/issues"
