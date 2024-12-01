@@ -5,7 +5,7 @@ export default defineConfig(({ watch }) => ({
   treeshake: true,
   format: ["cjs", "esm"],
   dts: true,
-  sourcemap: true,
+  sourcemap: !!watch,
   clean: true,
   splitting: true,
   target: "esnext",
