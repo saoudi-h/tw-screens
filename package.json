@@ -1,6 +1,6 @@
 {
   "name": "tw-screens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React hooks for using Tailwind CSS breakpoints easily and efficiently.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

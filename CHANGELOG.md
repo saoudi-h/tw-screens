@@ -1,3 +1,5 @@
+## [1.0.1](https://github.com/saoudi-h/tw-screens/compare/v1.0.0...v1.0.1) (2024-12-02)
+
 ## 1.0.0 (2024-10-27)
 
 ### Features
