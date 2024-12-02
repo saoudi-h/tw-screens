@@ -1,4 +1,4 @@
-**tw-screens** • **Docs**
+**tw-screens**
 
 ***
 

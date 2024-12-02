@@ -1,4 +1,4 @@
-[**tw-screens**](../README.md) • **Docs**
+[**tw-screens**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Type Alias: Screen
 
-> **Screen**: `object` \| `object` \| `object` \| `object`
+> **Screen**: \{`raw`: `string`; \} \| \{`min`: `string`; \} \| \{`max`: `string`; \} \| \{`max`: `string`;`min`: `string`; \}
 
 Defines the structure of a screen configuration object used in responsive design.
 
@@ -19,4 +19,4 @@ both min and max width values. Example configurations include:
 
 ## Defined in
 
-[utils/types.ts:18](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/utils/types.ts#L18)
+[utils/types.ts:21](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/utils/types.ts#L21)

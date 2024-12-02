@@ -1,4 +1,4 @@
-[**tw-screens**](../README.md) • **Docs**
+[**tw-screens**](../README.md)
 
 ***
 
@@ -12,11 +12,15 @@ React hook that checks if the current window size matches a specified breakpoint
 
 ## Parameters
 
-• **breakpoint**: [`ScreenValue`](../type-aliases/ScreenValue.md)
+### breakpoint
+
+[`ScreenValue`](../type-aliases/ScreenValue.md)
 
 The breakpoint to match, which can be a string or an object defining screen size.
 
-• **options?**: [`UseBreakpointOptions`](../interfaces/UseBreakpointOptions.md)
+### options?
+
+[`UseBreakpointOptions`](../interfaces/UseBreakpointOptions.md)
 
 Optional settings to reverse the matching logic.
 
@@ -38,4 +42,4 @@ const isLandscape = useBreakpointReverse({ raw: "(orientation: landscape)" });
 
 ## Defined in
 
-[hooks/useBreakpoint.ts:32](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/hooks/useBreakpoint.ts#L32)
+[hooks/useBreakpoint.ts:32](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/hooks/useBreakpoint.ts#L32)

@@ -1,4 +1,4 @@
-[**tw-screens**](../README.md) • **Docs**
+[**tw-screens**](../README.md)
 
 ***
 
@@ -31,7 +31,7 @@ The singleton instance of `BreakpointManager`.
 
 #### Defined in
 
-[managers/create.ts:79](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L79)
+[managers/create.ts:79](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/managers/create.ts#L79)
 
 ***
 
@@ -43,11 +43,15 @@ Determines if a specified breakpoint is currently matched.
 
 #### Parameters
 
-• **breakpointName**: `Screens` *extends* readonly `string`[] ? `Screens`\<`Screens`\>\[`number`\] : `Extract`\<keyof `Screens`, `string`\>
+##### breakpointName
+
+`Screens` *extends* readonly `string`[] ? `Screens`\<`Screens`\>\[`number`\] : `Extract`\<keyof `Screens`, `string`\>
 
 The name of the breakpoint to check.
 
-• **options?**: [`UseScreenOptions`](UseScreenOptions.md)
+##### options?
+
+[`UseScreenOptions`](UseScreenOptions.md)
 
 Options to modify the matching behavior.
 
@@ -59,7 +63,7 @@ Options to modify the matching behavior.
 
 #### Defined in
 
-[managers/create.ts:28](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L28)
+[managers/create.ts:28](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/managers/create.ts#L28)
 
 ***
 
@@ -71,15 +75,21 @@ Runs an effect when a specified breakpoint is matched or not.
 
 #### Parameters
 
-• **breakpointName**: `Screens` *extends* readonly `string`[] ? `Screens`\<`Screens`\>\[`number`\] : `Extract`\<keyof `Screens`, `string`\>
+##### breakpointName
+
+`Screens` *extends* readonly `string`[] ? `Screens`\<`Screens`\>\[`number`\] : `Extract`\<keyof `Screens`, `string`\>
 
 The name of the breakpoint to observe.
 
-• **effect**
+##### effect
+
+(`match`) => `void`
 
 A function to run when the match status changes.
 
-• **deps?**: [`DependencyList`](../type-aliases/DependencyList.md)
+##### deps?
+
+[`DependencyList`](../type-aliases/DependencyList.md)
 
 Optional dependencies to control when the effect should re-run.
 
@@ -89,7 +99,7 @@ Optional dependencies to control when the effect should re-run.
 
 #### Defined in
 
-[managers/create.ts:52](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L52)
+[managers/create.ts:52](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/managers/create.ts#L52)
 
 ***
 
@@ -101,7 +111,9 @@ Determines if a specified breakpoint is currently not matched.
 
 #### Parameters
 
-• **breakpointName**: `Screens` *extends* readonly `string`[] ? `Screens`\<`Screens`\>\[`number`\] : `Extract`\<keyof `Screens`, `string`\>
+##### breakpointName
+
+`Screens` *extends* readonly `string`[] ? `Screens`\<`Screens`\>\[`number`\] : `Extract`\<keyof `Screens`, `string`\>
 
 The name of the breakpoint to check.
 
@@ -113,7 +125,7 @@ The name of the breakpoint to check.
 
 #### Defined in
 
-[managers/create.ts:40](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L40)
+[managers/create.ts:40](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/managers/create.ts#L40)
 
 ***
 
@@ -131,15 +143,21 @@ Returns a specified value based on whether the breakpoint is matched or not.
 
 #### Parameters
 
-• **breakpointName**: `Screens` *extends* readonly `string`[] ? `Screens`\<`Screens`\>\[`number`\] : `Extract`\<keyof `Screens`, `string`\>
+##### breakpointName
+
+`Screens` *extends* readonly `string`[] ? `Screens`\<`Screens`\>\[`number`\] : `Extract`\<keyof `Screens`, `string`\>
 
 The name of the breakpoint to check.
 
-• **valid**: `T`
+##### valid
+
+`T`
 
 The value returned if the breakpoint is matched.
 
-• **invalid**: `U`
+##### invalid
+
+`U`
 
 The value returned if the breakpoint is not matched.
 
@@ -151,4 +169,4 @@ Either `valid` or `invalid` based on the match state.
 
 #### Defined in
 
-[managers/create.ts:67](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/managers/create.ts#L67)
+[managers/create.ts:67](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/managers/create.ts#L67)

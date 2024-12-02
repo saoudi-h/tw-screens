@@ -1,4 +1,4 @@
-[**tw-screens**](../README.md) • **Docs**
+[**tw-screens**](../README.md)
 
 ***
 
@@ -13,4 +13,4 @@ to specify dependencies for re-runs.
 
 ## Defined in
 
-[utils/types.ts:45](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/utils/types.ts#L45)
+[utils/types.ts:48](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/utils/types.ts#L48)

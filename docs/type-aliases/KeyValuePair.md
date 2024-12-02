@@ -1,4 +1,4 @@
-[**tw-screens**](../README.md) • **Docs**
+[**tw-screens**](../README.md)
 
 ***
 
@@ -19,4 +19,4 @@ and values are of type `V` (default: `string`).
 
 ## Defined in
 
-[utils/types.ts:6](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/utils/types.ts#L6)
+[utils/types.ts:6](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/utils/types.ts#L6)

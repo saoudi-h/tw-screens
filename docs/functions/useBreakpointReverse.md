@@ -1,4 +1,4 @@
-[**tw-screens**](../README.md) • **Docs**
+[**tw-screens**](../README.md)
 
 ***
 
@@ -14,7 +14,9 @@ hook with the `reverse` option enabled.
 
 ## Parameters
 
-• **breakpoint**: [`ScreenValue`](../type-aliases/ScreenValue.md)
+### breakpoint
+
+[`ScreenValue`](../type-aliases/ScreenValue.md)
 
 The breakpoint to match, provided as a screen size value.
 
@@ -34,4 +36,4 @@ const isMobile = useBreakpointReverse({ min: "480px" });
 
 ## Defined in
 
-[hooks/useBreakpointReverse.ts:19](https://github.com/saoudi-h/tw-screens/blob/88fd7cb306de641c909967670d6d413d954f23c9/src/hooks/useBreakpointReverse.ts#L19)
+[hooks/useBreakpointReverse.ts:19](https://github.com/saoudi-h/tw-screens/blob/71d2425cc2e58b55501e1e18610c4fc42dac0eb6/src/hooks/useBreakpointReverse.ts#L19)
