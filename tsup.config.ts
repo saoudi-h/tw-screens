@@ -1,4 +1,5 @@
 import { defineConfig } from "tsup";
+import pkg from "./package.json";
 
 export default defineConfig(({ watch }) => ({
   entry: ["src/index.ts"],
@@ -9,7 +10,7 @@ export default defineConfig(({ watch }) => ({
   clean: true,
   splitting: true,
   target: "esnext",
-  external: ["react"],
+  external: Object.keys(pkg.peerDependencies),
   minify: !watch,
   jsx: "transform",
 }));

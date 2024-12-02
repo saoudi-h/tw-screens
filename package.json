@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsup --tsconfig tsconfig.build.json",
     "format": "prettier --write \"{src,__tests__}/**/*.{ts,tsx,md,js,jsx}\"",
     "lint": "eslint \"{src,__tests__}/**/*.{ts,tsx,md,js,jsx}\"",
     "lint:fix": "eslint \"{src,__tests__}/**/*.{ts,tsx,md,js,jsx}\" --fix",
@@ -28,7 +28,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "repository": {
     "type": "git",
@@ -79,7 +80,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
-    "globals": "^15.12.0",
+    "globals": "^15.13.0",
     "husky": "^9.1.7",
     "jsdom": "^25.0.1",
     "lint-staged": "^15.2.10",
@@ -89,9 +90,9 @@
     "semantic-release": "^24.2.0",
     "tailwindcss": "^3.4.15",
     "tsup": "^8.3.4",
-    "typedoc": "^0.26.10",
-    "typedoc-plugin-markdown": "^4.3.0",
-    "typescript": "^5.0.0",
+    "typedoc": "^0.27.2",
+    "typedoc-plugin-markdown": "^4.3.1",
+    "typescript": "^5.7.2",
     "typescript-eslint": "^8.16.0",
     "vitest": "^2.1.6"
   },
