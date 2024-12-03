@@ -1,0 +1,15 @@
+{
+  "extends": ["config:base", ":label(renovate)", ":semanticCommitTypeAll(chore)"],
+  "automerge": true,
+  "automergeType": "pr",
+  "timezone": "Europe/Paris",
+  "schedule": ["daily"],
+  "packageRules": [
+    {
+      "groupName": "all major dependencies",
+      "groupSlug": "all-major",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["major"]
+    }
+  ]
+}
