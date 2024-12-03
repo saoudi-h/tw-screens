@@ -3,7 +3,7 @@
   "automerge": true,
   "automergeType": "pr",
   "timezone": "Europe/Paris",
-  "schedule": ["daily"],
+  "schedule": ["before 2am"],
   "packageRules": [
     {
       "groupName": "all major dependencies",
