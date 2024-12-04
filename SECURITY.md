@@ -7,14 +7,11 @@
 | 1.0.0   | :white_check_mark: |
 
 ## Reporting a Vulnerability
+If you discover a vulnerability, please open an issue in the GitHub repository. We will do our best to review the problem as soon as possible.
 
-Please report security vulnerabilities to security@example.com. We will respond within 48 hours with an initial assessment and next steps.
-
-## Response and Disclosure
-
-We aim to resolve security vulnerabilities within 30 days. Once a vulnerability is resolved, we will disclose the issue publicly and credit the reporter, unless otherwise requested.
+## Disclaimer
+This package is provided "as is" with no guarantee of active security monitoring. However, contributions and feedback to improve its security are welcome.
 
 ## Additional Resources
-
 - [GitHub Security Best Practices](https://docs.github.com/en/code-security/getting-started/github-security-features)
 - [Snyk Security Best Practices](https://snyk.io/learn/security-best-practices/)
