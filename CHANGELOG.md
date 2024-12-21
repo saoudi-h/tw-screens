@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/saoudi-h/tw-screens/compare/v1.0.2...v1.1.0) (2024-12-21)
+
+### Features
+
+* :arrow_up: upgrade to react 19 ([4cc55e3](https://github.com/saoudi-h/tw-screens/commit/4cc55e3841374524508a254b4a774632973768b2))
+
 ## [1.0.2](https://github.com/saoudi-h/tw-screens/compare/v1.0.1...v1.0.2) (2024-12-04)
 
 ## [1.0.1](https://github.com/saoudi-h/tw-screens/compare/v1.0.0...v1.0.1) (2024-12-02)
