@@ -90,7 +90,7 @@ export interface CreateResult<Screens extends ScreensConfig> {
 
 export function create<Screens extends ScreensConfig = typeof defaultScreens>(
   // eslint-disable-next-line
-  screens: Screens = defaultScreens as any
+  screens: Screens = defaultScreens as any,
 ): CreateResult<Screens> {
   const manager = BreakpointManager.getInstance(screens);
 
