@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/saoudi-h/tw-screens/compare/v1.1.1...v1.1.2) (2025-07-27)
+
+### Bug Fixes
+
+* eslint and prettier  extension files ([87b11be](https://github.com/saoudi-h/tw-screens/commit/87b11becf8472b3d5fa5b0767a225c55ac7dcc79))
+
 ## [1.1.1](https://github.com/saoudi-h/tw-screens/compare/v1.1.0...v1.1.1) (2025-07-27)
 
 ## [1.1.0](https://github.com/saoudi-h/tw-screens/compare/v1.0.2...v1.1.0) (2024-12-21)
