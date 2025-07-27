@@ -1,109 +1,109 @@
 {
-  "name": "tw-screens",
-  "version": "1.1.1",
-  "description": "React hooks for using Tailwind CSS breakpoints easily and efficiently.",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
-  },
-  "scripts": {
-    "build": "tsup --tsconfig tsconfig.build.json",
-    "format": "prettier --write \"{src,__tests__}/**/*.{ts,tsx,md,js,jsx}\"",
-    "lint": "eslint \"{src,__tests__}/**/*.{ts,tsx,md,js,jsx}\"",
-    "lint:fix": "eslint \"{src,__tests__}/**/*.{ts,tsx,md,js,jsx}\" --fix",
-    "clean": "del-cli node_modules dist",
-    "prepare": "pnpm build && pnpm husky",
-    "prepublishOnly": "pnpm run test && pnpm run lint",
-    "release": "semantic-release",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage",
-    "typecheck": "tsc --noEmit",
-    "doc": "typedoc"
-  },
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/saoudi-h/tw-screens.git"
-  },
-  "keywords": [
-    "react",
-    "tailwindcss",
-    "breakpoints",
-    "hooks",
-    "responsive",
-    "media-query",
-    "typescript",
-    "pnpm",
-    "npm",
-    "nextjs",
-    "design-system"
-  ],
-  "author": {
-    "name": "Saoudi Hakim",
-    "url": "https://hakimsaoudi.dev",
-    "email": "saoudihakim@gmail.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/saoudi-h/tw-screens/issues"
-  },
-  "engines": {
-    "node": ">=16"
-  },
-  "homepage": "https://github.com/saoudi-h/tw-screens#readme",
-  "devDependencies": {
-    "@eslint/js": "^9.32.0",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^13.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^11.0.3",
-    "@semantic-release/npm": "^12.0.2",
-    "@semantic-release/release-notes-generator": "^14.0.3",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.3.0",
-    "@types/react": "^19.1.8",
-    "@vitest/coverage-v8": "3.2.4",
-    "@vitest/ui": "^3.2.4",
-    "conventional-changelog-conventionalcommits": "^9.1.0",
-    "del-cli": "^6.0.0",
-    "eslint": "^9.32.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.3",
-    "eslint-plugin-react": "^7.37.5",
-    "globals": "^16.3.0",
-    "husky": "^9.1.7",
-    "jsdom": "^26.1.0",
-    "lint-staged": "^16.1.2",
-    "prettier": "3.6.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "semantic-release": "^24.2.7",
-    "tailwindcss": "^4.1.11",
-    "tsup": "^8.5.0",
-    "typedoc": "^0.28.7",
-    "typedoc-plugin-markdown": "^4.7.1",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0",
-    "vitest": "^3.2.4"
-  },
-  "peerDependencies": {
-    "react": ">=18"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
-      "prettier --write  --ignore-unknown"
-    ]
-  },
-  "packageManager": "pnpm@10.13.1"
+    "name": "tw-screens",
+    "version": "1.1.1",
+    "description": "React hooks for using Tailwind CSS breakpoints easily and efficiently.",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        }
+    },
+    "scripts": {
+        "build": "tsup --tsconfig tsconfig.build.json",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "clean": "del-cli node_modules dist",
+        "prepare": "pnpm build && pnpm husky",
+        "prepublishOnly": "pnpm run test && pnpm run lint",
+        "release": "semantic-release",
+        "test": "vitest",
+        "test:ui": "vitest --ui",
+        "test:coverage": "vitest --coverage",
+        "typecheck": "tsc --noEmit",
+        "doc": "typedoc"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/saoudi-h/tw-screens.git"
+    },
+    "keywords": [
+        "react",
+        "tailwindcss",
+        "breakpoints",
+        "hooks",
+        "responsive",
+        "media-query",
+        "typescript",
+        "pnpm",
+        "npm",
+        "nextjs",
+        "design-system"
+    ],
+    "author": {
+        "name": "Saoudi Hakim",
+        "url": "https://hakimsaoudi.dev",
+        "email": "saoudihakim@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/saoudi-h/tw-screens/issues"
+    },
+    "engines": {
+        "node": ">=16"
+    },
+    "homepage": "https://github.com/saoudi-h/tw-screens#readme",
+    "devDependencies": {
+        "@eslint/js": "^9.32.0",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/commit-analyzer": "^13.0.1",
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/github": "^11.0.3",
+        "@semantic-release/npm": "^12.0.2",
+        "@semantic-release/release-notes-generator": "^14.0.3",
+        "@testing-library/jest-dom": "^6.6.4",
+        "@testing-library/react": "^16.3.0",
+        "@types/react": "^19.1.8",
+        "@vitest/coverage-v8": "3.2.4",
+        "@vitest/ui": "^3.2.4",
+        "conventional-changelog-conventionalcommits": "^9.1.0",
+        "del-cli": "^6.0.0",
+        "eslint": "^9.32.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.3",
+        "eslint-plugin-react": "^7.37.5",
+        "globals": "^16.3.0",
+        "husky": "^9.1.7",
+        "jsdom": "^26.1.0",
+        "lint-staged": "^16.1.2",
+        "prettier": "3.6.2",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "semantic-release": "^24.2.7",
+        "tailwindcss": "^4.1.11",
+        "tsup": "^8.5.0",
+        "typedoc": "^0.28.7",
+        "typedoc-plugin-markdown": "^4.7.1",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.38.0",
+        "vitest": "^3.2.4"
+    },
+    "peerDependencies": {
+        "react": ">=18"
+    },
+    "lint-staged": {
+        "*.{ts,tsx,js,jsx}": [
+            "prettier --write  --ignore-unknown"
+        ]
+    },
+    "packageManager": "pnpm@10.13.1"
 }

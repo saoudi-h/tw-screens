@@ -1,5 +1,5 @@
-import { ScreenValue } from "@/utils";
-import { useBreakpoint } from "@/hooks";
+import { ScreenValue } from '@/utils'
+import { useBreakpoint } from '@/hooks'
 
 /**
  * `useBreakpointReverse` is a React hook that checks if the current window size
@@ -17,5 +17,5 @@ import { useBreakpoint } from "@/hooks";
  * ```
  */
 export function useBreakpointReverse(breakpoint: ScreenValue): boolean {
-  return useBreakpoint(breakpoint, { reverse: true });
+    return useBreakpoint(breakpoint, { reverse: true })
 }

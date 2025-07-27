@@ -1,6 +1,6 @@
 **tw-screens** • [**Docs**](./docs/README.md)
 
-***
+---
 
 # tw-screens
 
@@ -63,14 +63,14 @@ Define screens similar to Tailwind CSS using `min`, `max`, or `raw`.
 ```typescript
 // screens.ts
 export const screens = {
-  sm: "640px",
-  md: "768px",
-  lg: "1024px",
-  xl: "1280px",
-  "2xl": "1536px",
-  custom: { min: "600px", max: "900px" },
-  wide: { raw: "(min-width: 1600px)" },
-} as const;
+    sm: '640px',
+    md: '768px',
+    lg: '1024px',
+    xl: '1280px',
+    '2xl': '1536px',
+    custom: { min: '600px', max: '900px' },
+    wide: { raw: '(min-width: 1600px)' },
+} as const
 ```
 
 2. **Create Hooks Using `tw-screens`**
@@ -79,10 +79,10 @@ Use the `create` function to generate hooks for managing breakpoints.
 
 ```typescript
 // hooks.ts
-import { create } from "tw-screens";
-import { screens } from "./screens";
+import { create } from 'tw-screens'
+import { screens } from './screens'
 
-export const { useScreen, useScreenReverse, useScreenValue, useScreenEffect } = create(screens);
+export const { useScreen, useScreenReverse, useScreenValue, useScreenEffect } = create(screens)
 ```
 
 3. **Integrate with Tailwind CSS**
@@ -91,15 +91,15 @@ Add your screens to Tailwind to sync breakpoints.
 
 ```typescript
 // tailwind.config.js
-const { screens } = require('./screens');
+const { screens } = require('./screens')
 
 module.exports = {
-  theme: {
-    screens: {
-      ...screens,
+    theme: {
+        screens: {
+            ...screens,
+        },
     },
-  },
-};
+}
 ```
 
 4. **Use Hooks in Components**
@@ -138,44 +138,44 @@ function CustomRawBreakpointComponent() {
 
 1. **With Tailwind Screens**: Define breakpoints with Tailwind and sync them:
 
-   ```typescript
-   theme: {
-     screens: {
-       ...screens
-     }
-   }
-   ```
+    ```typescript
+    theme: {
+      screens: {
+        ...screens
+      }
+    }
+    ```
 
-   Default Tailwind configuration users can create hooks without a custom object:
+    Default Tailwind configuration users can create hooks without a custom object:
 
-   ```typescript
-   import { create } from 'tw-screens';
-   export const { useScreen, useScreenReverse, useScreenValue, useScreenEffect } = create();
-   ```
+    ```typescript
+    import { create } from 'tw-screens'
+    export const { useScreen, useScreenReverse, useScreenValue, useScreenEffect } = create()
+    ```
 
 2. **Ad-hoc Breakpoints with `useBreakpoint`**: Use for one-off breakpoints:
 
-   ```typescript
-   import { useBreakpoint } from 'tw-screens/hooks';
+    ```typescript
+    import { useBreakpoint } from 'tw-screens/hooks';
 
-   const ExampleComponent = () => {
-     const isMediumScreen = useBreakpoint("850px");
-     return <div>{isMediumScreen ? "Medium Screen" : "Other Screen"}</div>;
-   };
-   ```
+    const ExampleComponent = () => {
+      const isMediumScreen = useBreakpoint("850px");
+      return <div>{isMediumScreen ? "Medium Screen" : "Other Screen"}</div>;
+    };
+    ```
 
 ---
 
 ## API Documentation
 
 - **`create(screens: ScreensConfig)`**
-  - Generates hooks like `useScreen`, `useScreenReverse`, and others for custom breakpoints.
+    - Generates hooks like `useScreen`, `useScreenReverse`, and others for custom breakpoints.
 
 - **`useBreakpoint(breakpoint: ScreenValue, options?: UseBreakpointOptions): boolean`**
-  - **breakpoint**: A string or object (`{ min: '640px', max: '1024px' }`).
+    - **breakpoint**: A string or object (`{ min: '640px', max: '1024px' }`).
 
 - **`useBreakpointReverse(breakpoint: ScreenValue): boolean`**
-  - Provides the opposite of `useBreakpoint`.
+    - Provides the opposite of `useBreakpoint`.
 
 For more details, check the [documentation](./docs).
 
@@ -206,4 +206,3 @@ We welcome contributions to improve `tw-screens`. Feel free to open issues, sugg
 ---
 
 For full documentation, please check our [documentation](./docs/README.md) folder.
-

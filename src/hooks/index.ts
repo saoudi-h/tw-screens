@@ -1,2 +1,2 @@
-export * from "./useBreakpoint";
-export * from "./useBreakpointReverse";
+export * from './useBreakpoint'
+export * from './useBreakpointReverse'

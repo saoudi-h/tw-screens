@@ -1,16 +1,16 @@
-import { ScreenValue } from "@/utils";
-import { useState } from "react";
-import { generateMediaQuery, useIsomorphicEffect } from "@/utils";
+import { ScreenValue } from '@/utils'
+import { useState } from 'react'
+import { generateMediaQuery, useIsomorphicEffect } from '@/utils'
 
 /**
  * Options for the `useBreakpoint` hook to customize behavior.
  */
 export interface UseBreakpointOptions {
-  /**
-   * When `true`, reverses the logic of the breakpoint match.
-   * Default is `false`.
-   */
-  reverse?: boolean;
+    /**
+     * When `true`, reverses the logic of the breakpoint match.
+     * Default is `false`.
+     */
+    reverse?: boolean
 }
 
 /**
@@ -29,34 +29,31 @@ export interface UseBreakpointOptions {
  * const isLandscape = useBreakpointReverse({ raw: "(orientation: landscape)" });
  * ```
  */
-export function useBreakpoint(
-  breakpoint: ScreenValue,
-  options?: UseBreakpointOptions,
-): boolean {
-  const [matches, setMatches] = useState<boolean>(false);
+export function useBreakpoint(breakpoint: ScreenValue, options?: UseBreakpointOptions): boolean {
+    const [matches, setMatches] = useState<boolean>(false)
 
-  useIsomorphicEffect(() => {
-    const mediaQuery = generateMediaQuery(breakpoint);
+    useIsomorphicEffect(() => {
+        const mediaQuery = generateMediaQuery(breakpoint)
 
-    if (typeof window !== "undefined" && window.matchMedia) {
-      const mql = window.matchMedia(mediaQuery);
+        if (typeof window !== 'undefined' && window.matchMedia) {
+            const mql = window.matchMedia(mediaQuery)
 
-      const handleChange = (event: MediaQueryListEvent) => {
-        setMatches(event.matches);
-      };
+            const handleChange = (event: MediaQueryListEvent) => {
+                setMatches(event.matches)
+            }
 
-      setMatches(mql.matches);
+            setMatches(mql.matches)
 
-      mql.addEventListener("change", handleChange);
+            mql.addEventListener('change', handleChange)
 
-      return () => {
-        mql.removeEventListener("change", handleChange);
-      };
-    } else {
-      setMatches(false);
-      return undefined;
-    }
-  }, [breakpoint]);
+            return () => {
+                mql.removeEventListener('change', handleChange)
+            }
+        } else {
+            setMatches(false)
+            return undefined
+        }
+    }, [breakpoint])
 
-  return options?.reverse ? !matches : matches;
+    return options?.reverse ? !matches : matches
 }

@@ -1,5 +1,5 @@
 // https://github.com/kodingdotninja/use-tailwind-breakpoint/blob/main/src/utils.ts
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from 'react'
 
 // https://github.com/pmndrs/zustand/blob/833f57ed131e94f3ed48627d4cfbf09cb9c7df03/src/react.ts#L20-L23
 
@@ -11,16 +11,16 @@ import { useEffect, useLayoutEffect } from "react";
  * It checks for `window` existence and user-agent specifics to identify SSR contexts.
  */
 export const isSSR =
-  typeof window === "undefined" ||
-  !window.navigator ||
-  /ServerSideRendering|^Deno\//.test(window.navigator.userAgent);
+    typeof window === 'undefined' ||
+    !window.navigator ||
+    /ServerSideRendering|^Deno\//.test(window.navigator.userAgent)
 
 /**
  * Determines if the code is running in a browser environment.
  * - Returns `true` in browser environments.
  * - Returns `false` in SSR environments.
  */
-export const isBrowser = !isSSR;
+export const isBrowser = !isSSR
 
 /**
  * Hook that uses `useLayoutEffect` on the client and `useEffect` in SSR environments,
@@ -29,4 +29,4 @@ export const isBrowser = !isSSR;
  * This approach prevents warnings and errors that occur when `useLayoutEffect` is used
  * in SSR. The hook behaves identically to `useLayoutEffect` in the browser.
  */
-export const useIsomorphicEffect = isBrowser ? useLayoutEffect : useEffect;
+export const useIsomorphicEffect = isBrowser ? useLayoutEffect : useEffect

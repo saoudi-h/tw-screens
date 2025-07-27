@@ -18,5 +18,14 @@
         "declarationMap": false
     },
     "include": ["./src/**/*"],
-    "exclude": ["dist", "build", "node_modules", ".vscode", ".turbo", "scripts", "docs", "__tests__"]
+    "exclude": [
+        "dist",
+        "build",
+        "node_modules",
+        ".vscode",
+        ".turbo",
+        "scripts",
+        "docs",
+        "__tests__"
+    ]
 }
