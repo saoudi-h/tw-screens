@@ -1,7 +1,7 @@
 import { generateMediaQuery } from '@/utils'
-import { ScreensConfig, ScreenValue } from '@/utils/types'
+import type { ScreensConfig, ScreenValue } from '@/utils/types'
 
-type Callback = (matches: boolean) => void
+type Callback = () => void
 
 /**
  * Manages media query breakpoints and their states. Allows multiple instances
@@ -11,7 +11,7 @@ type Callback = (matches: boolean) => void
  */
 export class BreakpointManager<Screens extends ScreensConfig> {
     /** Map of instances for each unique screen configuration */
-    // eslint-disable-next-line
+     
     static instances = new Map<string, BreakpointManager<any>>()
 
     /** Stores the current match state for each breakpoint */
@@ -44,6 +44,11 @@ export class BreakpointManager<Screens extends ScreensConfig> {
     ): BreakpointManager<Screens> {
         const key = JSON.stringify(screens)
         if (!this.instances.has(key)) {
+            if (this.instances.size > 10) {
+                console.warn(
+                    '[tw-screens] High number of BreakpointManager instances detected. Ensure you are calling `create()` at the module level and not inside components to avoid memory leaks.'
+                )
+            }
             this.instances.set(key, new BreakpointManager(screens))
         }
         return this.instances.get(key)!
@@ -59,7 +64,7 @@ export class BreakpointManager<Screens extends ScreensConfig> {
         if (!(name in this.breakpointsState)) {
             throw new Error(`Breakpoint "${name}" is not defined`)
         }
-        return this.breakpointsState[name]
+        return !!this.breakpointsState[name]
     }
 
     /**
@@ -73,7 +78,7 @@ export class BreakpointManager<Screens extends ScreensConfig> {
     /**
      * Subscribes to changes for a specific breakpoint, triggering the callback when it changes.
      * @param name - The name of the breakpoint.
-     * @param callback - Function to call with the match state on changes.
+     * @param callback - Function to call when the match state changes.
      * @returns A function to unsubscribe from changes.
      * @throws Will throw an error if the breakpoint name is not defined.
      */
@@ -84,7 +89,6 @@ export class BreakpointManager<Screens extends ScreensConfig> {
         }
 
         subscribers.add(callback)
-        callback(this.breakpointsState[name])
 
         return () => {
             subscribers.delete(callback)
@@ -122,7 +126,7 @@ export class BreakpointManager<Screens extends ScreensConfig> {
     private setupBreakpoint(name: string, screenValue: ScreenValue): void {
         const mediaQuery = generateMediaQuery(screenValue)
 
-        if (typeof window !== 'undefined' && window.matchMedia) {
+        if (typeof window !== 'undefined') {
             const mql = window.matchMedia(mediaQuery)
             this.mediaQueryLists[name] = mql
             this.breakpointsState[name] = mql.matches
@@ -130,7 +134,7 @@ export class BreakpointManager<Screens extends ScreensConfig> {
 
             const listener = (event: MediaQueryListEvent) => {
                 this.breakpointsState[name] = event.matches
-                this.notifySubscribers(name, event.matches)
+                this.notifySubscribers(name)
             }
 
             mql.addEventListener('change', listener)
@@ -145,10 +149,9 @@ export class BreakpointManager<Screens extends ScreensConfig> {
     /**
      * Notifies all subscribers of a breakpoint when its state changes.
      * @param name - The name of the breakpoint.
-     * @param matches - The new match state of the breakpoint.
      */
-    private notifySubscribers(name: string, matches: boolean): void {
-        this.subscribers[name]?.forEach(callback => callback(matches))
+    private notifySubscribers(name: string): void {
+        this.subscribers[name]?.forEach(callback => callback())
     }
 
     /**

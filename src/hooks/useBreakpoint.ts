@@ -1,6 +1,6 @@
-import { ScreenValue } from '@/utils'
-import { useState } from 'react'
-import { generateMediaQuery, useIsomorphicEffect } from '@/utils'
+import type { ScreenValue } from '@/utils'
+import { useCallback, useMemo, useSyncExternalStore } from 'react'
+import { generateMediaQuery } from '@/utils'
 
 /**
  * Options for the `useBreakpoint` hook to customize behavior.
@@ -30,30 +30,28 @@ export interface UseBreakpointOptions {
  * ```
  */
 export function useBreakpoint(breakpoint: ScreenValue, options?: UseBreakpointOptions): boolean {
-    const [matches, setMatches] = useState<boolean>(false)
+    const mediaQuery = useMemo(() => generateMediaQuery(breakpoint), [breakpoint])
 
-    useIsomorphicEffect(() => {
-        const mediaQuery = generateMediaQuery(breakpoint)
-
-        if (typeof window !== 'undefined' && window.matchMedia) {
+    const subscribe = useCallback(
+        (callback: () => void) => {
+            if (typeof window === 'undefined') return () => {}
             const mql = window.matchMedia(mediaQuery)
+            mql.addEventListener('change', callback)
+            return () => mql.removeEventListener('change', callback)
+        },
+        [mediaQuery]
+    )
 
-            const handleChange = (event: MediaQueryListEvent) => {
-                setMatches(event.matches)
-            }
+    const getSnapshot = useCallback(() => {
+        if (typeof window === 'undefined') return false
+        return window.matchMedia(mediaQuery).matches
+    }, [mediaQuery])
 
-            setMatches(mql.matches)
-
-            mql.addEventListener('change', handleChange)
-
-            return () => {
-                mql.removeEventListener('change', handleChange)
-            }
-        } else {
-            setMatches(false)
-            return undefined
-        }
-    }, [breakpoint])
+    const matches = useSyncExternalStore(
+        subscribe,
+        getSnapshot,
+        () => false // Server snapshot
+    )
 
     return options?.reverse ? !matches : matches
 }
