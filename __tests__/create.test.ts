@@ -4,7 +4,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { defaultScreens, BreakpointManager } from '@/managers'
 
 declare global {
-    // eslint-disable-next-line
+     
     var setScreenWidth: (width: number) => void
 }
 

@@ -2,18 +2,25 @@
     "name": "tw-screens",
     "version": "1.1.2",
     "description": "React hooks for using Tailwind CSS breakpoints easily and efficiently.",
-    "main": "dist/index.js",
+    "main": "dist/index.cjs",
     "module": "dist/index.mjs",
-    "types": "dist/index.d.ts",
+    "types": "dist/index.d.mts",
     "sideEffects": false,
+    "type": "module",
     "exports": {
         ".": {
-            "import": "./dist/index.mjs",
-            "require": "./dist/index.js"
+            "import": {
+                "types": "./dist/index.d.mts",
+                "default": "./dist/index.mjs"
+            },
+            "require": {
+                "types": "./dist/index.d.cts",
+                "default": "./dist/index.cjs"
+            }
         }
     },
     "scripts": {
-        "build": "tsup --tsconfig tsconfig.build.json",
+        "build": "tsdown",
         "format": "prettier --write .",
         "lint": "eslint .",
         "lint:fix": "eslint . --fix",
@@ -21,11 +28,13 @@
         "prepare": "pnpm build && pnpm husky",
         "prepublishOnly": "pnpm run test && pnpm run lint",
         "release": "semantic-release",
-        "test": "vitest",
+        "test": "vitest run",
+        "test:watch": "vitest",
         "test:ui": "vitest --ui",
         "test:coverage": "vitest --coverage",
         "typecheck": "tsc --noEmit",
-        "doc": "typedoc"
+        "doc": "typedoc",
+        "autonomos": "autonomos"
     },
     "files": [
         "dist",
@@ -63,39 +72,39 @@
     },
     "homepage": "https://github.com/saoudi-h/tw-screens#readme",
     "devDependencies": {
-        "@eslint/js": "^9.33.0",
+        "@autonomos/cli": "^0.3.3",
         "@semantic-release/changelog": "^6.0.3",
         "@semantic-release/commit-analyzer": "^13.0.1",
         "@semantic-release/git": "^10.0.1",
-        "@semantic-release/github": "^11.0.4",
-        "@semantic-release/npm": "^12.0.2",
+        "@semantic-release/github": "^12.0.9",
+        "@semantic-release/npm": "^13.1.5",
         "@semantic-release/release-notes-generator": "^14.0.3",
+        "@tala-tools/eslint": "^0.1.5",
+        "@tala-tools/prettier": "^0.0.3",
+        "@tala-tools/tsconfig": "^0.0.2",
+        "@tala-tools/tsdown": "^0.1.5",
         "@testing-library/jest-dom": "^6.6.4",
         "@testing-library/react": "^16.3.0",
         "@types/react": "^19.1.9",
-        "@vitest/coverage-v8": "3.2.4",
-        "@vitest/ui": "^3.2.4",
-        "conventional-changelog-conventionalcommits": "^9.1.0",
+        "@vitest/coverage-v8": "4.1.10",
+        "@vitest/ui": "^4.1.10",
+        "conventional-changelog-conventionalcommits": "^10.2.1",
         "del-cli": "^7.0.0",
-        "eslint": "^9.33.0",
-        "eslint-config-prettier": "^10.1.8",
-        "eslint-plugin-prettier": "^5.5.4",
-        "eslint-plugin-react": "^7.37.5",
-        "globals": "^16.3.0",
+        "eslint": "^10.7.0",
+        "globals": "^17.7.0",
         "husky": "^9.1.7",
-        "jsdom": "^27.0.0",
-        "lint-staged": "^16.1.5",
-        "prettier": "3.6.2",
+        "jsdom": "^29.1.1",
+        "lint-staged": "^17.0.0",
+        "prettier": "3.9.5",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
-        "semantic-release": "^24.2.7",
+        "semantic-release": "^25.0.8",
         "tailwindcss": "^4.1.11",
-        "tsup": "^8.5.0",
+        "tsdown": "^0.22.9",
         "typedoc": "^0.28.10",
         "typedoc-plugin-markdown": "^4.8.0",
-        "typescript": "^5.9.2",
-        "typescript-eslint": "^8.39.1",
-        "vitest": "^3.2.4"
+        "typescript": "^6.0.0",
+        "vitest": "^4.1.10"
     },
     "peerDependencies": {
         "react": ">=18"
@@ -105,5 +114,5 @@
             "prettier --write  --ignore-unknown"
         ]
     },
-    "packageManager": "pnpm@10.29.1"
+    "packageManager": "pnpm@11.15.0"
 }

@@ -1,6 +1,6 @@
 import type { ScreenValue } from './types'
 
-const unitRegex = /^\s*\d+(\.\d+)?(px|em|rem|vh|vw)\s*$/
+const unitRegex = /^\s*\d+(?:\.\d+)?(?:px|em|rem|vh|vw)\s*$/
 
 /**
  * Custom error class for errors related to media query generation.

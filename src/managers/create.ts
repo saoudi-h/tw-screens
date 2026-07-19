@@ -1,5 +1,5 @@
 import type { DependencyList, ScreensConfig } from '@/utils'
-import { useMemo, useState } from 'react'
+import { useMemo, useSyncExternalStore } from 'react'
 import { defaultScreens } from './defaultScreens'
 import { useIsomorphicEffect } from '@/utils'
 import { BreakpointManager } from './BreakpointManager'
@@ -89,7 +89,7 @@ export interface CreateResult<Screens extends ScreensConfig> {
  */
 
 export function create<Screens extends ScreensConfig = typeof defaultScreens>(
-    // eslint-disable-next-line
+     
     screens: Screens = defaultScreens as any
 ): CreateResult<Screens> {
     const manager = BreakpointManager.getInstance(screens)
@@ -105,14 +105,11 @@ export function create<Screens extends ScreensConfig = typeof defaultScreens>(
      * @returns `true` if the breakpoint is matched, `false` if not, and if reversed, opposite results.
      */
     const useScreen = (breakpointName: BreakpointName, options?: UseScreenOptions): boolean => {
-        const [isMatch, setIsMatch] = useState<boolean>(() =>
-            manager.getBreakpointState(breakpointName)
+        const isMatch = useSyncExternalStore(
+            (callback) => manager.subscribe(breakpointName, callback),
+            () => manager.getBreakpointState(breakpointName),
+            () => false // Server snapshot
         )
-
-        useIsomorphicEffect(() => {
-            const unsubscribe = manager.subscribe(breakpointName, setIsMatch)
-            return unsubscribe
-        }, [breakpointName])
 
         return options?.reverse ? !isMatch : isMatch
     }

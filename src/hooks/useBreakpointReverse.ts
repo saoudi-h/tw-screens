@@ -1,4 +1,4 @@
-import { ScreenValue } from '@/utils'
+import type { ScreenValue } from '@/utils'
 import { useBreakpoint } from '@/hooks'
 
 /**
