@@ -181,6 +181,16 @@ For more details, check the [documentation](./docs).
 
 ---
 
+## Tailwind v4 & Best Practices
+
+With the release of Tailwind v4, configuration has moved from `tailwind.config.js` to pure CSS using the `@theme` directive. Because `tw-screens` historically relied on sharing the JavaScript configuration object, here is the recommended approach moving forward:
+
+1. **CSS First**: Always prefer using Tailwind's native responsive utility classes (e.g., `hidden md:block`) instead of JavaScript hooks when possible. CSS is faster, doesn't trigger React re-renders, and avoids Server-Side Rendering (SSR) flashes of unstyled content (FOUC).
+2. **When to use `tw-screens`**: Use these hooks *only* when your application requires conditional rendering of heavy components or logic changes across breakpoints (e.g., rendering a complex `Drawer` component on mobile instead of a `Sidebar`).
+3. **Using with v4**: You can still use `tw-screens` in a Tailwind v4 project by defining your custom logic breakpoints directly via `create()` or `useBreakpoint()`, keeping your logical breakpoints separate from your purely visual CSS breakpoints.
+
+---
+
 ## Problem Solved
 
 `tw-screens` simplifies responsive UIs in React, supporting custom breakpoints and easy Tailwind integration while ensuring type safety and performance.
