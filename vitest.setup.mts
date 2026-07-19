@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+ 
 import '@testing-library/jest-dom/vitest'
 import { vi } from 'vitest'
 
@@ -47,10 +47,10 @@ function evalMediaQuery(query: string, width: number): boolean {
     let minWidth = 0
     let maxWidth = Infinity
 
-    if (minMatch) {
+    if (minMatch && minMatch[1]) {
         minWidth = parseInt(minMatch[1], 10)
     }
-    if (maxMatch) {
+    if (maxMatch && maxMatch[1]) {
         maxWidth = parseInt(maxMatch[1], 10)
     }
 

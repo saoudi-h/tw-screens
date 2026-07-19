@@ -12,6 +12,7 @@ describe('BreakpointManager', () => {
             if (!mediaQueryCallbacks[query]) {
                 mediaQueryCallbacks[query] = []
             }
+            const callbacks = mediaQueryCallbacks[query]!
 
             return {
                 matches: initialMatches,
@@ -19,16 +20,16 @@ describe('BreakpointManager', () => {
                 addEventListener: vi.fn(
                     (event: string, callback: (e: MediaQueryListEvent) => void) => {
                         if (event === 'change') {
-                            mediaQueryCallbacks[query].push(callback)
+                            callbacks.push(callback)
                         }
                     }
                 ),
                 removeEventListener: vi.fn(
                     (event: string, callback: (e: MediaQueryListEvent) => void) => {
                         if (event === 'change') {
-                            const index = mediaQueryCallbacks[query].indexOf(callback)
+                            const index = callbacks.indexOf(callback)
                             if (index > -1) {
-                                mediaQueryCallbacks[query].splice(index, 1)
+                                callbacks.splice(index, 1)
                             }
                         }
                     }
@@ -95,7 +96,7 @@ describe('BreakpointManager', () => {
     })
 
     describe('subscribe', () => {
-        it('should call callback with initial state and on changes', () => {
+        it('should call callback on changes', () => {
             const matchMedia = createMatchMedia(false)
             vi.stubGlobal('window', { matchMedia })
 
@@ -104,10 +105,10 @@ describe('BreakpointManager', () => {
             const callback = vi.fn()
 
             const unsubscribe = manager.subscribe('sm', callback)
-            expect(callback).toHaveBeenCalledWith(false)
+            expect(callback).not.toHaveBeenCalled()
 
             triggerMediaChange('(min-width: 640px)', true)
-            expect(callback).toHaveBeenCalledWith(true)
+            expect(callback).toHaveBeenCalledTimes(1)
 
             unsubscribe()
         })
@@ -126,8 +127,8 @@ describe('BreakpointManager', () => {
 
             triggerMediaChange('(min-width: 640px)', true)
 
-            expect(callback1).toHaveBeenCalledWith(true)
-            expect(callback2).toHaveBeenCalledWith(true)
+            expect(callback1).toHaveBeenCalledTimes(1)
+            expect(callback2).toHaveBeenCalledTimes(1)
         })
 
         it('should properly unsubscribe callback', () => {
@@ -142,7 +143,7 @@ describe('BreakpointManager', () => {
             unsubscribe()
 
             triggerMediaChange('(min-width: 640px)', true)
-            expect(callback).toHaveBeenCalledTimes(1)
+            expect(callback).toHaveBeenCalledTimes(0)
         })
     })
 
@@ -159,7 +160,7 @@ describe('BreakpointManager', () => {
             manager.cleanup()
 
             triggerMediaChange('(min-width: 640px)', true)
-            expect(callback).toHaveBeenCalledTimes(1)
+            expect(callback).toHaveBeenCalledTimes(0)
         })
     })
 

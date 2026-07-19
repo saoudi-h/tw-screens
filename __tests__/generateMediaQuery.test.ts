@@ -63,7 +63,7 @@ describe('generateMediaQuery', () => {
     })
 
     it('should throw an error for an object with invalid properties', () => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+         
         const screen: any = { foo: 'bar' }
         expect(() => generateMediaQuery(screen)).toThrow(MediaQueryError)
     })
