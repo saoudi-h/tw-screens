@@ -1,13 +1,3 @@
-const config = {
-    tabWidth: 4,
-    useTabs: false,
-    singleQuote: true,
-    semi: false,
-    bracketSpacing: true,
-    arrowParens: 'avoid',
-    trailingComma: 'es5',
-    bracketSameLine: true,
-    printWidth: 100,
-}
+import baseConfig from '@tala-tools/prettier'
 
-export default config
+export default baseConfig
