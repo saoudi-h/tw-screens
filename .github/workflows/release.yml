@@ -34,5 +34,6 @@ jobs:
 
             - name: Run release
               env:
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: pnpx semantic-release
