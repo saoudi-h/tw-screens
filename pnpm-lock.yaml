@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@autonomos/cli':
         specifier: ^0.4.0
-        version: 0.4.0
+        version: 0.4.1
       '@semantic-release/changelog':
         specifier: ^6.0.3
         version: 6.0.3(semantic-release@25.0.8(supports-color@7.2.0)(typescript@6.0.3))
@@ -140,8 +140,8 @@ packages:
   '@asamuzakjp/nwsapi@2.3.9':
     resolution: {integrity: sha512-n8GuYSrI9bF7FFZ/SjhwevlHc8xaVlb/7HmHelnc/PZXBD2ZR49NnN9sMMuDdEGPeeRQ5d0hqlSlEpgCX3Wl0Q==}
 
-  '@autonomos/cli@0.4.0':
-    resolution: {integrity: sha512-SLbKwPSKhlYuFypqfy09OUAaKoZ2qIDQuaNW/uMBAjHXlekBTe9ab+ajqB2zgqwLMObDnCjYcmNJIzKLpfcj5g==}
+  '@autonomos/cli@0.4.1':
+    resolution: {integrity: sha512-qEMGJhHqegh6T3yN8IzIEBnxbz0nG4sJacVoYxfy+SSeVQNdD1k5QsU1ZRfzCwBBxiMJl+soDhb7/i/ONPhYrA==}
     hasBin: true
 
   '@autonomos/core@0.4.0':
@@ -4714,7 +4714,7 @@ snapshots:
 
   '@asamuzakjp/nwsapi@2.3.9': {}
 
-  '@autonomos/cli@0.4.0':
+  '@autonomos/cli@0.4.1':
     dependencies:
       '@autonomos/core': 0.4.0
       '@inquirer/prompts': 7.10.1
