@@ -114,5 +114,5 @@
             "prettier --write  --ignore-unknown"
         ]
     },
-    "packageManager": "pnpm@11.15.0"
+    "packageManager": "pnpm@11.20.0"
 }
