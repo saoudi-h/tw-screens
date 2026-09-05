@@ -73,9 +73,9 @@
     "homepage": "https://github.com/saoudi-h/tw-screens#readme",
     "devDependencies": {
         "@autonomos/cli": "^0.4.0",
-        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/changelog": "^7.0.0",
         "@semantic-release/commit-analyzer": "^13.0.1",
-        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/git": "^11.0.0",
         "@semantic-release/github": "^12.0.9",
         "@semantic-release/npm": "^13.1.5",
         "@semantic-release/release-notes-generator": "^14.0.3",
@@ -83,17 +83,17 @@
         "@tala-tools/prettier": "^0.0.3",
         "@tala-tools/tsconfig": "^0.0.2",
         "@tala-tools/tsdown": "^0.1.5",
-        "@testing-library/jest-dom": "^6.6.4",
+        "@testing-library/jest-dom": "^7.0.0",
         "@testing-library/react": "^16.3.0",
         "@types/react": "^19.1.9",
-        "@vitest/coverage-v8": "4.1.10",
-        "@vitest/ui": "^4.1.10",
+        "@vitest/coverage-v8": "5.0.0",
+        "@vitest/ui": "^5.0.0",
         "conventional-changelog-conventionalcommits": "^10.2.1",
         "del-cli": "^7.0.0",
         "eslint": "^10.7.0",
         "globals": "^17.7.0",
         "husky": "^9.1.7",
-        "jsdom": "^29.1.1",
+        "jsdom": "^30.0.0",
         "lint-staged": "^17.0.0",
         "prettier": "3.9.5",
         "react": "^19.1.1",
@@ -103,8 +103,8 @@
         "tsdown": "^0.22.9",
         "typedoc": "^0.28.10",
         "typedoc-plugin-markdown": "^4.8.0",
-        "typescript": "^6.0.0",
-        "vitest": "^4.1.10"
+        "typescript": "^7.0.0",
+        "vitest": "^5.0.0"
     },
     "peerDependencies": {
         "react": ">=18"
@@ -114,5 +114,5 @@
             "prettier --write  --ignore-unknown"
         ]
     },
-    "packageManager": "pnpm@11.15.0"
+    "packageManager": "pnpm@12.3.4"
 }
