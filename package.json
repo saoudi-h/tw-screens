@@ -81,7 +81,7 @@
         "@semantic-release/release-notes-generator": "^14.0.3",
         "@tala-tools/eslint": "^0.1.5",
         "@tala-tools/prettier": "^0.0.3",
-        "@tala-tools/tsconfig": "^0.0.2",
+        "@tala-tools/tsconfig": "^0.1.0",
         "@tala-tools/tsdown": "^0.1.5",
         "@testing-library/jest-dom": "^6.6.4",
         "@testing-library/react": "^16.3.0",
