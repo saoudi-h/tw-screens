@@ -225,7 +225,7 @@ importers:
         version: 10.7.0(jiti@2.7.0)(supports-color@7.2.0)
       globals:
         specifier: ^17.7.0
-        version: 17.8.0
+        version: 17.12.0
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -2671,10 +2671,6 @@ packages:
 
   globals@17.12.0:
     resolution: {integrity: sha512-cezEd/DTyyht9cvSSURyygXPfy04GtWO/5e6ZPvH7fCtjKz9PYOmuawphw1Ctd1f6C+5JypXfGD7ahNMXvevBA==}
-    engines: {node: '>=18'}
-
-  globals@17.8.0:
-    resolution: {integrity: sha512-Zz/LMDZScFmkakeL2cTHzf+PbWKdpU3uclqkZT7TjDG58j5WPt0PpA+n9uPI24fZtlw07q0OtEi84K+umsRzqQ==}
     engines: {node: '>=18'}
 
   globalthis@1.0.4:
@@ -6767,7 +6763,7 @@ snapshots:
   eslint-plugin-playwright@2.12.0(eslint@10.7.0(jiti@2.7.0)(supports-color@7.2.0)):
     dependencies:
       eslint: 10.7.0(jiti@2.7.0)(supports-color@7.2.0)
-      globals: 17.8.0
+      globals: 17.12.0
 
   eslint-plugin-react-hooks@7.1.1(eslint@10.7.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
@@ -7127,8 +7123,6 @@ snapshots:
       is-glob: 4.0.3
 
   globals@17.12.0: {}
-
-  globals@17.8.0: {}
 
   globalthis@1.0.4:
     dependencies:
