@@ -100,7 +100,7 @@
         "react-dom": "^19.1.1",
         "semantic-release": "^25.0.8",
         "tailwindcss": "^4.1.11",
-        "tsdown": "^0.22.9",
+        "tsdown": "^0.23.0",
         "typedoc": "^0.28.10",
         "typedoc-plugin-markdown": "^4.8.0",
         "typescript": "^7.0.0",
