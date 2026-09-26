@@ -86,7 +86,7 @@
         "@testing-library/jest-dom": "^7.0.0",
         "@testing-library/react": "^16.3.0",
         "@types/react": "^19.1.9",
-        "@vitest/coverage-v8": "5.0.1",
+        "@vitest/coverage-v8": "5.0.2",
         "@vitest/ui": "^5.0.0",
         "conventional-changelog-conventionalcommits": "^10.2.1",
         "del-cli": "^7.0.0",
