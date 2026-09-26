@@ -192,7 +192,7 @@ importers:
         version: 0.1.7(eslint@10.11.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(tailwindcss@4.3.3)(turbo@2.10.5)(typescript@7.0.2)
       '@tala-tools/prettier':
         specifier: ^0.0.3
-        version: 0.0.3(prettier@3.9.8)
+        version: 0.0.3(prettier@3.9.9)
       '@tala-tools/tsconfig':
         specifier: ^0.1.0
         version: 0.1.0
@@ -236,8 +236,8 @@ importers:
         specifier: ^17.0.0
         version: 17.5.1
       prettier:
-        specifier: 3.9.8
-        version: 3.9.8
+        specifier: 3.9.9
+        version: 3.9.9
       react:
         specifier: ^19.1.1
         version: 19.3.0
@@ -3646,8 +3646,8 @@ packages:
     resolution: {integrity: sha512-E6rsNU1QNJgB3sjj7OANinGncFKuK+164sLXw1/CqBjj/EkXSoSdHCtWQGBNlREIGLnL7IEUEGa08YFVUbrhVg==}
     engines: {node: '>=16'}
 
-  prettier@3.9.8:
-    resolution: {integrity: sha512-WRFq3Wn3WId7LLROfMLdH7xaFr2jR62wU8nLO6rQUOLOxNZUviyJQs1M0iIhLexSFy+L+w0ch66wtoO2jRjG0A==}
+  prettier@3.9.9:
+    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5609,9 +5609,9 @@ snapshots:
       - turbo
       - typescript
 
-  '@tala-tools/prettier@0.0.3(prettier@3.9.8)':
+  '@tala-tools/prettier@0.0.3(prettier@3.9.9)':
     dependencies:
-      prettier: 3.9.8
+      prettier: 3.9.9
 
   '@tala-tools/tsconfig@0.1.0': {}
 
@@ -7956,7 +7956,7 @@ snapshots:
 
   presentable-error@0.0.1: {}
 
-  prettier@3.9.8: {}
+  prettier@3.9.9: {}
 
   pretty-format@27.5.1:
     dependencies:
