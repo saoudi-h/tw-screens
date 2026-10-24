@@ -191,8 +191,8 @@ importers:
         specifier: ^0.1.5
         version: 0.1.7(eslint@10.13.0(jiti@2.7.0)(supports-color@7.2.0))(supports-color@7.2.0)(tailwindcss@4.3.3)(turbo@2.10.5)(typescript@7.0.2)
       '@tala-tools/prettier':
-        specifier: ^0.0.3
-        version: 0.0.3(prettier@3.9.10)
+        specifier: ^0.0.5
+        version: 0.0.5(prettier@3.9.10)
       '@tala-tools/tsconfig':
         specifier: ^0.1.0
         version: 0.1.0
@@ -1319,10 +1319,15 @@ packages:
       tailwindcss:
         optional: true
 
-  '@tala-tools/prettier@0.0.3':
-    resolution: {integrity: sha512-uMKIWsXj6UY5kc3k1A8kJ6KdjMgQkE9dnGoHQteVmxQZgODeAUBfPKGSnmSe9ZzC+5nUKq55Sl3MCI49GB/s6w==}
+  '@tala-tools/prettier@0.0.5':
+    resolution: {integrity: sha512-4/OcbcEZw4VTRIi8syAsGK7KjWl7k087Gc/x6q3Gf7Yy3dMVWXvaOiyyQzt/Vjp2OZbRZlN75JssYTsoWwaRhg==}
+    engines: {node: '>=20.19.0'}
     peerDependencies:
       prettier: ^3.7.4
+      prettier-plugin-organize-imports: ^4.3.0
+    peerDependenciesMeta:
+      prettier-plugin-organize-imports:
+        optional: true
 
   '@tala-tools/tsconfig@0.1.0':
     resolution: {integrity: sha512-bTX6g7aI9gLt0eZBVILXUkXoSzenquvQzZOF++dKFfbD3QVGA+oMjXcLwomLPhA6b5csFz9LxeS5r/Jc7UGE+A==}
@@ -5531,7 +5536,7 @@ snapshots:
       - turbo
       - typescript
 
-  '@tala-tools/prettier@0.0.3(prettier@3.9.10)':
+  '@tala-tools/prettier@0.0.5(prettier@3.9.10)':
     dependencies:
       prettier: 3.9.10
 
