@@ -198,7 +198,7 @@ importers:
         version: 0.1.2
       '@tala-tools/tsdown':
         specifier: ^0.1.5
-        version: 0.1.7(esbuild@0.28.1)(rolldown@1.2.13)(tsdown@0.23.1(oxc-resolver@11.24.2)(publint@0.3.24)(typescript@7.0.2)(unplugin-unused@0.6.0(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))))(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
+        version: 0.1.10(esbuild@0.28.1)(rolldown@1.2.13)(tsdown@0.23.1(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))))(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
       '@testing-library/jest-dom':
         specifier: ^7.0.0
         version: 7.0.1(@testing-library/dom@10.4.1)(vitest@5.0.5)
@@ -252,7 +252,7 @@ importers:
         version: 4.3.3
       tsdown:
         specifier: ^0.23.0
-        version: 0.23.1(oxc-resolver@11.24.2)(publint@0.3.24)(typescript@7.0.2)(unplugin-unused@0.6.0(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)))
+        version: 0.23.1(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)))
       typedoc:
         specifier: ^0.28.10
         version: 0.28.20(typescript@7.0.2)
@@ -1333,8 +1333,9 @@ packages:
     resolution: {integrity: sha512-d2eVAyu3KF0IwbGdgJnLkFEQxgRd799DaNlLP+Kfhd6qQY9ZNTyaf88vmxXD0EjFbdaeh8ubAy1EjGb6RQ0wQw==}
     engines: {node: '>=20.19.0'}
 
-  '@tala-tools/tsdown@0.1.7':
-    resolution: {integrity: sha512-r5bES8rK9NnXPjF6xv3yNLNsiKsg7FTcT84iYRbu7yS3cVHCNRvSgSxfJ5R9VrwTyxTUUhHLw3T4D1hmOPJ0sA==}
+  '@tala-tools/tsdown@0.1.10':
+    resolution: {integrity: sha512-IM+zsQvpR6uuh6jSQK4wXOgGMl1PIXqGYUGnFq2NfFnQbICJJOwTxpfydY24pP0la4pb5Xu68KjSFZquJZReMw==}
+    engines: {node: '>=20.19.0'}
     peerDependencies:
       tsdown: 0.21.7
 
@@ -3611,8 +3612,8 @@ packages:
       kerberos:
         optional: true
 
-  publint@0.3.24:
-    resolution: {integrity: sha512-9zS56KrKBoqi5Qt8h92uMP8TTM9AYZSgnmCo4u2priMqkOZvQnTsziZ2p5LJ2ywbYkAjoCDp2jda9u4cgFefIw==}
+  publint@0.3.25:
+    resolution: {integrity: sha512-WMMbn/d7JqRlfXQL/JUI4n5skC8cJ5WVr8/wT5mmiYWkUdENkZr1I5rgs2+dQPVRgoJd+JRYtB46MTsuDylw9g==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -4273,9 +4274,9 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
-  unplugin-unused@0.6.0:
-    resolution: {integrity: sha512-ov+8yoEs5lyCjK7AqSUmpLuyEhtHwKtNtc1PrpwJVCNQjv+Dins4+7e1+ej57yo8lfiW/zOr9FAEmNmjgU+hFQ==}
-    engines: {node: ^22.18.0 || ^24.11.0 || >=26.0.0}
+  unplugin-unused@0.5.7:
+    resolution: {integrity: sha512-quvqrHs6mPhk1hjbGwMoypXfagveue+/22dtgDrEzc2K9485ZAsnVfq7iYIgv7FwooiRa6+HDaLWgK2IavN+2g==}
+    engines: {node: '>=20.19.0'}
 
   unplugin@3.3.0:
     resolution: {integrity: sha512-qa66K+crbfyE6JK10GjvbJeRrOsuC/JpbnHctfyp/i4oBTxWOzJfRZyDiOk1PtErMFRu8JhsU/wPvOdBNWe5Rg==}
@@ -5543,11 +5544,11 @@ snapshots:
 
   '@tala-tools/tsconfig@0.1.2': {}
 
-  '@tala-tools/tsdown@0.1.7(esbuild@0.28.1)(rolldown@1.2.13)(tsdown@0.23.1(oxc-resolver@11.24.2)(publint@0.3.24)(typescript@7.0.2)(unplugin-unused@0.6.0(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))))(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))':
+  '@tala-tools/tsdown@0.1.10(esbuild@0.28.1)(rolldown@1.2.13)(tsdown@0.23.1(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))))(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))':
     dependencies:
-      publint: 0.3.24
-      tsdown: 0.23.1(oxc-resolver@11.24.2)(publint@0.3.24)(typescript@7.0.2)(unplugin-unused@0.6.0(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)))
-      unplugin-unused: 0.6.0(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
+      publint: 0.3.25
+      tsdown: 0.23.1(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)))
+      unplugin-unused: 0.5.7(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
     transitivePeerDependencies:
       - '@farmfe/core'
       - '@rspack/core'
@@ -7869,7 +7870,7 @@ snapshots:
 
   proxy-agent-negotiate@1.1.0: {}
 
-  publint@0.3.24:
+  publint@0.3.25:
     dependencies:
       '@publint/pack': 0.1.7
       package-manager-detector: 1.8.0
@@ -8469,7 +8470,7 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tsdown@0.23.1(oxc-resolver@11.24.2)(publint@0.3.24)(typescript@7.0.2)(unplugin-unused@0.6.0(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))):
+  tsdown@0.23.1(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))):
     dependencies:
       cac: 7.0.1
       defu: 6.1.7
@@ -8486,9 +8487,9 @@ snapshots:
       unconfig-core: 7.5.0
       verkit: 0.5.0
     optionalDependencies:
-      publint: 0.3.24
+      publint: 0.3.25
       typescript: 7.0.2
-      unplugin-unused: 0.6.0(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
+      unplugin-unused: 0.5.7(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
     transitivePeerDependencies:
       - '@typescript/native-preview'
       - '@volar/typescript'
@@ -8647,7 +8648,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-unused@0.6.0(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)):
+  unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.2.13)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)):
     dependencies:
       empathic: 2.1.0
       escape-string-regexp: 5.0.0
