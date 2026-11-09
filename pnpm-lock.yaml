@@ -198,7 +198,7 @@ importers:
         version: 0.1.2
       '@tala-tools/tsdown':
         specifier: ^0.1.5
-        version: 0.1.10(esbuild@0.28.1)(rolldown@1.3.0)(tsdown@0.23.7(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.3.0)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))))(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
+        version: 0.1.11(esbuild@0.28.1)(rolldown@1.3.0)(tsdown@0.23.7(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.3.0)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))))(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))
       '@testing-library/jest-dom':
         specifier: ^7.0.0
         version: 7.0.1(@testing-library/dom@10.4.1)(vitest@5.1.0)
@@ -1351,8 +1351,8 @@ packages:
     resolution: {integrity: sha512-d2eVAyu3KF0IwbGdgJnLkFEQxgRd799DaNlLP+Kfhd6qQY9ZNTyaf88vmxXD0EjFbdaeh8ubAy1EjGb6RQ0wQw==}
     engines: {node: '>=20.19.0'}
 
-  '@tala-tools/tsdown@0.1.10':
-    resolution: {integrity: sha512-IM+zsQvpR6uuh6jSQK4wXOgGMl1PIXqGYUGnFq2NfFnQbICJJOwTxpfydY24pP0la4pb5Xu68KjSFZquJZReMw==}
+  '@tala-tools/tsdown@0.1.11':
+    resolution: {integrity: sha512-m55mHwIcegIX9peSNI0ETDN9m67pDeFeZmbRbUL4Ymt51HbK4WTYCBhxKWUPTkONrLGJ+t06j70kFVI74cxhWQ==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       tsdown: 0.21.7
@@ -5458,7 +5458,7 @@ snapshots:
 
   '@tala-tools/tsconfig@0.1.2': {}
 
-  '@tala-tools/tsdown@0.1.10(esbuild@0.28.1)(rolldown@1.3.0)(tsdown@0.23.7(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.3.0)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))))(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))':
+  '@tala-tools/tsdown@0.1.11(esbuild@0.28.1)(rolldown@1.3.0)(tsdown@0.23.7(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.3.0)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))))(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0))':
     dependencies:
       publint: 0.3.25
       tsdown: 0.23.7(oxc-resolver@11.24.2)(publint@0.3.25)(typescript@7.0.2)(unplugin-unused@0.5.7(esbuild@0.28.1)(rolldown@1.3.0)(vite@8.1.5(@types/node@26.5.1)(esbuild@0.28.1)(jiti@2.7.0)(yaml@2.9.0)))
