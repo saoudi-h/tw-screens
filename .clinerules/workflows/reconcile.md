@@ -28,7 +28,7 @@ Classify findings as **certain**, **uncertain**, or **historical-only**.
 - Apply the protocol's archival eligibility to coherent work batches. Completing a child task does not resolve unmet parent criteria. Consolidate still-needed knowledge in its existing narrowest home first.
 - Use `/adopt` for history-to-artifact extraction into new specs/decisions; routine reconciliation may update existing guidance within authority.
 - Closed tasks/issues go to `.autonomos/archive/closed/` (`autonomos close <ID>`). Move other eligible history to `.autonomos/archive/<batch>/`, preserve content/provenance/IDs and repair references. Update the topic index; retain only necessary current dependencies/outcomes, not permanent per-completion stubs.
-- Over-budget `AGENT.md`: keep guidance that applies to most tasks of its scope; move the rest to a narrower `AGENT.md` or project documentation and link it. Over-long open task entries: move evidence and acceptance criteria to the worklog first, then shorten to one line. Never delete a record or its content to satisfy a finding; one that needs an owner decision becomes an open task saying why.
+- Over-budget `AGENT.md`: keep guidance that applies to most tasks of its scope; move the rest to a narrower `AGENT.md` or project documentation and link it. Over-long open task entries: move evidence and acceptance criteria to the worklog first, then shorten to one line. Never delete a record or its content to satisfy a finding. Findings are agent work, never escalated to the owner; one this task cannot finish becomes an open task saying what remains.
 
 ## STEP 4 — Verify and report
 
