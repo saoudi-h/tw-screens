@@ -167,8 +167,8 @@ importers:
   .:
     devDependencies:
       '@autonomos/cli':
-        specifier: ^0.7.1
-        version: 0.7.1(@types/node@26.5.1)
+        specifier: ^0.8.4
+        version: 0.8.4(@types/node@26.5.1)
       '@semantic-release/changelog':
         specifier: ^7.0.0
         version: 7.0.0(semantic-release@25.0.9(supports-color@7.2.0)(typescript@7.0.2))
@@ -291,12 +291,12 @@ packages:
     resolution: {integrity: sha512-3+777rEPsOOjoy5/sRmIzHnoRDaLpm3XWY2dmWn/N7f/XwDG0bcpnFaKL3X9FYJUbNwLmpcJC1bUYexJRxsFlw==}
     engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
 
-  '@autonomos/cli@0.7.1':
-    resolution: {integrity: sha512-iLVM3e84yF2/Whd5UBgV3IAv8+eV1dLsb3NJvEqtVRNtPgnJ6kAQPW7AmGBLyTSxvRremIQN9Wi+ru8Lzo6Y8g==}
+  '@autonomos/cli@0.8.4':
+    resolution: {integrity: sha512-UXoZ2pz9CUKIB+0A+7VKls9aEo3jCLLnNvfji2U9HhrIjggR+l7FnRp6DiPpUpbeh8yIlS1o0hNZQ7gNQYA7gA==}
     hasBin: true
 
-  '@autonomos/core@0.7.1':
-    resolution: {integrity: sha512-/mwX15gME4RLhxahb+qNlzDkWx9/hKMKz08UzQkgSL8AW0FAbLS56ppjcpnU3eLa+3C/RjJK7xNgehKG3oYSog==}
+  '@autonomos/core@0.8.4':
+    resolution: {integrity: sha512-MoSYT34sqSpLp8y8SVhsSplm41QTkERgfWtpZz780/NZXGzEtI96EcdRnL3klB1J3CMbC+QLjISEuPpD5HdvDA==}
 
   '@babel/code-frame@7.29.7':
     resolution: {integrity: sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw==}
@@ -4500,16 +4500,16 @@ snapshots:
       is-potential-custom-element-name: 1.0.1
       lru-cache: 11.5.3
 
-  '@autonomos/cli@0.7.1(@types/node@26.5.1)':
+  '@autonomos/cli@0.8.4(@types/node@26.5.1)':
     dependencies:
-      '@autonomos/core': 0.7.1
+      '@autonomos/core': 0.8.4
       '@inquirer/prompts': 7.10.1(@types/node@26.5.1)
       commander: 14.0.3
       picocolors: 1.1.1
     transitivePeerDependencies:
       - '@types/node'
 
-  '@autonomos/core@0.7.1':
+  '@autonomos/core@0.8.4':
     dependencies:
       js-yaml: 4.1.0
       zod: 3.24.1

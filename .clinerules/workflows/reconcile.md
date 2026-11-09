@@ -11,7 +11,8 @@ description: 'Investigate drift, consolidate current knowledge and archive settl
 
 1. Read root and applicable scoped `AGENT.md`, current tasks/issues and relevant accepted records. Follow the protocol's archival criteria; search history only for a specific question.
 2. Classify individual claims as current guidance, current state, historical evidence, or version-pinned protocol content; a paragraph may mix them.
-3. Check managed integrity with `autonomos status` when available; repair managed artifacts only through authorized `autonomos update`.
+3. Check managed integrity and context budgets with `autonomos status` when available; repair managed artifacts only through authorized `autonomos update`.
+4. If the artifact format is outdated, run an authorized `autonomos migrate --dry-run`, then `autonomos migrate`, before semantic work; its remaining findings become this pass's work items. Move each follow-up it reports into an open record; leftover prose about closed work is yours to archive.
 
 ## STEP 2 — Investigate
 
@@ -26,7 +27,8 @@ Classify findings as **certain**, **uncertain**, or **historical-only**.
 - **Historical-only:** preserve it outside default context when eligible; do not rewrite conclusions to match today.
 - Apply the protocol's archival eligibility to coherent work batches. Completing a child task does not resolve unmet parent criteria. Consolidate still-needed knowledge in its existing narrowest home first.
 - Use `/adopt` for history-to-artifact extraction into new specs/decisions; routine reconciliation may update existing guidance within authority.
-- Move eligible records to `.autonomos/archive/<batch>/`, preserve content/provenance/IDs and repair references. Update the topic index; retain only necessary current dependencies/outcomes, not permanent per-completion stubs.
+- Closed tasks/issues go to `.autonomos/archive/closed/` (`autonomos close <ID>`). Move other eligible history to `.autonomos/archive/<batch>/`, preserve content/provenance/IDs and repair references. Update the topic index; retain only necessary current dependencies/outcomes, not permanent per-completion stubs.
+- Over-budget `AGENT.md`: keep guidance that applies to most tasks of its scope; move the rest to a narrower `AGENT.md` or project documentation and link it. Over-long open task entries: move evidence and acceptance criteria to the worklog first, then shorten to one line. Never delete a record or its content to satisfy a finding; one that needs an owner decision becomes an open task saying why.
 
 ## STEP 4 — Verify and report
 
