@@ -209,6 +209,16 @@ We welcome contributions to improve `tw-screens`. Feel free to open issues, sugg
 
 ---
 
+## Other projects
+
+Related open-source projects by [Hakim Saoudi](https://github.com/saoudi-h):
+
+- [Postdot](https://postdot.app/?utm_source=github&utm_medium=readme&utm_campaign=tw-screens): self-hosted social publishing for you and your agents
+- [Solar Icons](https://solar-icons.dev/?utm_source=github&utm_medium=readme&utm_campaign=tw-screens): an icon catalogue in six styles, with packages for major frameworks
+- [RateLock](https://ratelock-docs.vercel.app/?utm_source=github&utm_medium=readme&utm_campaign=tw-screens): rate limiting for Node.js, Bun and other runtimes
+- [Autonomos](https://github.com/saoudi-h/autonomos): a protocol that gives AI coding agents structured project context
+- [Tala Tools](https://github.com/saoudi-h/tala-tools): shared lint, format, TypeScript and build configurations
+
 ## License
 
 `tw-screens` is MIT licensed.
